@@ -20,6 +20,7 @@ void Task_5_5()
 {
     int arraySize = 10;
     int* array = new int[arraySize];
+	//TODO: проще
     array[0] = 1;
     array[1] = 15;
     array[2] = -8;

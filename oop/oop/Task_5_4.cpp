@@ -23,6 +23,7 @@ void Task_5_4()
 {
     int arraySize = 10;
     double* array = new double[arraySize];
+	//TODO: проще
     array[0] = 1.0;
     array[1] = 15.0;
     array[2] = -8.2;

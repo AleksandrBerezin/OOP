@@ -6,6 +6,7 @@ void Task_5_1()
 {
     int arraySize = 10;
     double* array = new double[arraySize];
+	//TODO: боже мой. Попроще проинициализировать массив нельзя?
     array[0] = 1.0;
     array[1] = 15.0;
     array[2] = -8.2;

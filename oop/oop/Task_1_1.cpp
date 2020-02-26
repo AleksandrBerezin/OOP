@@ -1,7 +1,8 @@
 #include <iostream>
 
 using namespace std;
-
+//TODO: зачем инлайн?
+//TODO: здесь и в других заданиях с брейкпоинтами подпиши в комментариях ответ к задаче
 inline void Breakpoints()
 {
 	double add = 1.0;

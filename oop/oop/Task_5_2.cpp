@@ -6,7 +6,9 @@ using namespace std;
 void Task_5_2()
 {
     int arraySize = 8;
+	//TODO: зачем тебе arraySize, если всё равно используешь 8?
     bool* array = new bool[8];
+	//TODO: проще
     array[0] = true;
     array[1] = false;
     array[2] = true;

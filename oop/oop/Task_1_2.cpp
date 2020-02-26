@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+//TODO: зачем инлайн?
 inline void Breakpoints()
 {
 	double add = 1.0;
