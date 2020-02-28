@@ -1,30 +1,50 @@
 #include <iostream>
-#include "Task_1_1.h"
-#include "Task_1_2.h"
-#include "Task_2_1.h"
-#include "Task_2_2.h"
-#include "Task_2_3.h"
-#include "Task_3_3.h"
-#include "Task_3_4.h"
-#include "Task_4_1.h"
-#include "Task_4_2.h"
-#include "Task_4_3.h"
-#include "Task_4_4.h"
-#include "Task_4_5.h"
-#include "Task_4_6.h"
-#include "Task_4_8.h"
-#include "Task_5_1.h"
-#include "Task_5_2.h"
-#include "Task_5_3.h"
-#include "Task_5_4.h"
-#include "Task_5_5.h"
-#include "Task_5_6.h"
-#include "Task_5_7.h"
-#include "Task_5_8.h"
-//TODO: название решения заглавными буквами - это аббревиатура
+#include "Tasks.h"
+#include "Menus.h"
+//TODO: РЅР°Р·РІР°РЅРёРµ СЂРµС€РµРЅРёСЏ Р·Р°РіР»Р°РІРЅС‹РјРё Р±СѓРєРІР°РјРё - СЌС‚Рѕ Р°Р±Р±СЂРµРІРёР°С‚СѓСЂР°
+
+using namespace std;
+
+int InputInt();
 
 int main()
 {
-	//TODO: куча инклюдов, чтобы запустить одну задачу...
-    Task_3_4();
+	//TODO: РєСѓС‡Р° РёРЅРєР»СЋРґРѕРІ, С‡С‚РѕР±С‹ Р·Р°РїСѓСЃС‚РёС‚СЊ РѕРґРЅСѓ Р·Р°РґР°С‡Сѓ...
+	bool isExit = false;
+
+	while (!isExit)
+	{
+		cout << endl;
+		cout << "Select number of laboratory work:" << endl
+			<< "1) Laboratory work 1;" << endl
+			<< "2) Work in progress..." << endl
+			<< "0) Exit." << endl;
+		cout << endl;
+
+		switch (InputInt())
+		{
+			case 1:
+			{
+				MenuLab1();
+				break;
+			}
+			case 2:
+			{
+				cout << "Work in progress... Please choose other option." << endl;
+				break;
+			}
+			case 0:
+			{
+				isExit = true;
+				break;
+			}
+			default:
+			{
+				cout << "Wrong option selected, try again." << endl;
+				break;
+			}
+		}
+	}
+
+	return 0;
 }

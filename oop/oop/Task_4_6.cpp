@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Task_4_6.h"
 
 using namespace std;
 

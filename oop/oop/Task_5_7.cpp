@@ -1,6 +1,5 @@
 #include <iostream>
 #include <ctime>
-#include "Task_5_7.h"
 
 using namespace std;
 

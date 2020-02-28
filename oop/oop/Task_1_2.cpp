@@ -1,8 +1,9 @@
 #include <iostream>
 
 using namespace std;
-//TODO: зачем инлайн?
-inline void Breakpoints()
+//TODO: Р·Р°С‡РµРј РёРЅР»Р°Р№РЅ?
+//РџСЂРё i = 777 sum = 3.26.
+static void Breakpoints()
 {
 	double add = 1.0;
 	double sum = 0.0;

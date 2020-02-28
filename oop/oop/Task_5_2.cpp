@@ -1,22 +1,12 @@
 #include <iostream>
-#include "Task_5_2.h"
 
 using namespace std;
 
 void Task_5_2()
 {
     int arraySize = 8;
-	//TODO: зачем тебе arraySize, если всё равно используешь 8?
-    bool* array = new bool[8];
-	//TODO: проще
-    array[0] = true;
-    array[1] = false;
-    array[2] = true;
-    array[3] = true;
-    array[4] = false;
-    array[5] = true;
-    array[6] = false;
-    array[7] = false;
+	//TODO: Р·Р°С‡РµРј С‚РµР±Рµ arraySize, РµСЃР»Рё РІСЃС‘ СЂР°РІРЅРѕ РёСЃРїРѕР»СЊР·СѓРµС€СЊ 8?
+    bool* array = new bool[arraySize] {true, false, true, true, false, true, false, false};
 
     cout << endl;
     cout << "Array of bool:" << endl;

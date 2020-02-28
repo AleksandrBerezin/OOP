@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Task_5_5.h"
 
 using namespace std;
 
@@ -19,18 +18,7 @@ int SearchIndexByValue(int array[], int length, int value)
 void Task_5_5()
 {
     int arraySize = 10;
-    int* array = new int[arraySize];
-	//TODO: проще
-    array[0] = 1;
-    array[1] = 15;
-    array[2] = -8;
-    array[3] = -3;
-    array[4] = 12;
-    array[5] = 38;
-    array[6] = 0;
-    array[7] = 4;
-    array[8] = 16;
-    array[9] = 4;
+    int* array = new int[arraySize] {1, 15, -8, -3, 12, 38, 0, 4, 16, 4};
 
     cout << "Int array:" << endl;
     for (int i = 0; i < arraySize; i++)
