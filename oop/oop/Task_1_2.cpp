@@ -1,7 +1,6 @@
 #include <iostream>
 
 using namespace std;
-//TODO: зачем инлайн?
 //При i = 777 sum = 3.26.
 static void Breakpoints()
 {

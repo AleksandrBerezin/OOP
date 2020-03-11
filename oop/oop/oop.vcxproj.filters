@@ -25,13 +25,22 @@
     <Filter Include="Source Files\Lab1\Menus">
       <UniqueIdentifier>{b235c6c6-839c-4930-9ee2-35663f270825}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Lab1">
+      <UniqueIdentifier>{9f82dfb8-c247-4ed6-b14c-b00cd9856334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tasks">
+      <UniqueIdentifier>{0f22634c-4801-4ac2-a470-d12276e6bac0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{52c2e757-f272-44e9-95e6-c4598f6c4a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{02b8b6b4-6804-4dbc-af84-87b9cd0518c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuLab1.cpp">
-      <Filter>Source Files\Lab1</Filter>
     </ClCompile>
     <ClCompile Include="Task_1_1.cpp">
       <Filter>Source Files\Lab1\Tasks</Filter>
@@ -99,9 +108,6 @@
     <ClCompile Include="Task_5_8.cpp">
       <Filter>Source Files\Lab1\Tasks</Filter>
     </ClCompile>
-    <ClCompile Include="CommonLibrary.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="MenuAddressesAndPointers.cpp">
       <Filter>Source Files\Lab1\Menus</Filter>
     </ClCompile>
@@ -117,19 +123,25 @@
     <ClCompile Include="MenuFunctions.cpp">
       <Filter>Source Files\Lab1\Menus</Filter>
     </ClCompile>
+    <ClCompile Include="MenuLab1.cpp">
+      <Filter>Source Files\Lab1\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonLibrary.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tasks.h">
-      <Filter>Source Files\Lab1\Tasks</Filter>
-    </ClInclude>
-    <ClInclude Include="CommonLibrary.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="MenusLab1.h">
-      <Filter>Source Files\Lab1\Menus</Filter>
+      <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="Tasks.h">
+      <Filter>Header Files\Tasks</Filter>
     </ClInclude>
     <ClInclude Include="Menus.h">
-      <Filter>Common</Filter>
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonLibrary.h">
+      <Filter>Header Files\Common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

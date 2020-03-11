@@ -1,15 +1,12 @@
 #include <iostream>
 #include "Tasks.h"
 #include "Menus.h"
-//TODO: название решения заглавными буквами - это аббревиатура
+#include "CommonLibrary.h"
 
 using namespace std;
 
-int InputInt();
-
 int main()
 {
-	//TODO: куча инклюдов, чтобы запустить одну задачу...
 	bool isExit = false;
 
 	while (!isExit)

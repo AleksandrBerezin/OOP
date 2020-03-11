@@ -5,7 +5,6 @@ using namespace std;
 void Task_5_2()
 {
     int arraySize = 8;
-	//TODO: зачем тебе arraySize, если всё равно используешь 8?
     bool* array = new bool[arraySize] {true, false, true, true, false, true, false, false};
 
     cout << endl;
