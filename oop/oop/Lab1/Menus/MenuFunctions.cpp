@@ -1,6 +1,6 @@
 #include <iostream>
-#include "CommonLibrary.h"
-#include "Tasks.h"
+#include "../../Common/CommonLibrary.h"
+#include "../Tasks/Tasks.h"
 
 using namespace std;
 

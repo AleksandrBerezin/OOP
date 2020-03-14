@@ -1,20 +1,19 @@
 #include <iostream>
-#include "CommonLibrary.h"
-#include "Tasks.h"
+#include "../../Common/CommonLibrary.h"
+#include "../Tasks/Tasks.h"
 
 using namespace std;
 
-void MenuArrays()
+void MenuAlgoritmsAndDebugging()
 {
 	bool isBack = false;
 
 	while (!isBack)
 	{
 		cout << endl;
-		cout << "Select task:" << endl
-			<< "1) Task 2.1;" << endl
-			<< "2) Task 2.2;" << endl
-			<< "3) Task 2.3;" << endl
+		cout << "Select option:" << endl
+			<< "1) Task 1.1;" << endl
+			<< "2) Task 1.2;" << endl
 			<< "0) Back." << endl;
 		cout << endl;
 
@@ -22,17 +21,12 @@ void MenuArrays()
 		{
 			case 1:
 			{
-				Task_2_1();
+				Task_1_1();
 				break;
 			}
 			case 2:
 			{
-				Task_2_2();
-				break;
-			}
-			case 3:
-			{
-				Task_2_3();
+				Task_1_2();
 				break;
 			}
 			case 0:

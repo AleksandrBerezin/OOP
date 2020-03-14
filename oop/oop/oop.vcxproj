@@ -148,42 +148,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CommonLibrary.cpp" />
+    <ClCompile Include="Common\CommonLibrary.cpp" />
+    <ClCompile Include="Lab1\MenuLab1.cpp" />
+    <ClCompile Include="Lab1\Menus\MenuAddressesAndPointers.cpp" />
+    <ClCompile Include="Lab1\Menus\MenuAlgoritmsAndDebugging.cpp" />
+    <ClCompile Include="Lab1\Menus\MenuArrays.cpp" />
+    <ClCompile Include="Lab1\Menus\MenuDynamicMemory.cpp" />
+    <ClCompile Include="Lab1\Menus\MenuFunctions.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_1_1.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_1_2.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_2_1.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_2_2.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_2_3.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_3_3.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_3_4.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_4_1.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_4_2.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_4_3.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_4_4.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_4_5.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_4_6.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_4_8.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_5_1.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_5_2.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_5_3.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_5_4.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_5_5.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_5_6.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_5_7.cpp" />
+    <ClCompile Include="Lab1\Tasks\Task_5_8.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MenuAddressesAndPointers.cpp" />
-    <ClCompile Include="MenuAlgoritmsAndDebugging.cpp" />
-    <ClCompile Include="MenuArrays.cpp" />
-    <ClCompile Include="MenuDynamicMemory.cpp" />
-    <ClCompile Include="MenuFunctions.cpp" />
-    <ClCompile Include="MenuLab1.cpp" />
-    <ClCompile Include="Task_1_2.cpp" />
-    <ClCompile Include="Task_1_1.cpp" />
-    <ClCompile Include="Task_2_1.cpp" />
-    <ClCompile Include="Task_2_2.cpp" />
-    <ClCompile Include="Task_2_3.cpp" />
-    <ClCompile Include="Task_3_3.cpp" />
-    <ClCompile Include="Task_3_4.cpp" />
-    <ClCompile Include="Task_4_1.cpp" />
-    <ClCompile Include="Task_4_2.cpp" />
-    <ClCompile Include="Task_4_3.cpp" />
-    <ClCompile Include="Task_4_4.cpp" />
-    <ClCompile Include="Task_4_5.cpp" />
-    <ClCompile Include="Task_4_6.cpp" />
-    <ClCompile Include="Task_4_8.cpp" />
-    <ClCompile Include="Task_5_1.cpp" />
-    <ClCompile Include="Task_5_2.cpp" />
-    <ClCompile Include="Task_5_3.cpp" />
-    <ClCompile Include="Task_5_4.cpp" />
-    <ClCompile Include="Task_5_5.cpp" />
-    <ClCompile Include="Task_5_6.cpp" />
-    <ClCompile Include="Task_5_7.cpp" />
-    <ClCompile Include="Task_5_8.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CommonLibrary.h" />
-    <ClInclude Include="Menus.h" />
-    <ClInclude Include="MenusLab1.h" />
-    <ClInclude Include="Tasks.h" />
+    <ClInclude Include="Common\CommonLibrary.h" />
+    <ClInclude Include="Common\Menus.h" />
+    <ClInclude Include="Lab1\Menus\MenusLab1.h" />
+    <ClInclude Include="Lab1\Tasks\Tasks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
