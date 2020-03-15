@@ -15,7 +15,7 @@ int* MakeRandomArray(int arraySize)
     return array;
 }
 
-void Task_5_7()
+void Task_1_5_7()
 {
     srand(time(nullptr));
 

@@ -21,7 +21,7 @@ void DemoRoundToTens(int number)
 	cout << number << endl;
 }
 
-void Task_3_4()
+void Task_1_3_4()
 {
 	DemoRoundToTens(14);
 	DemoRoundToTens(191);

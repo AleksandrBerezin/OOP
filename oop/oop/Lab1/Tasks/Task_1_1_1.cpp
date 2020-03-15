@@ -23,7 +23,7 @@ static void Breakpoints()
 	cout << "Total sum is " << sum << endl;
 }
 
-void Task_1_1()
+void Task_1_1_1()
 {
 	Breakpoints();
 }

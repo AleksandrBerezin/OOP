@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Task_4_6()
+void Task_1_4_6()
 {
 	int a = 5;
 	int* pointer = &a;

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Task_2_2()
+void Task_1_2_2()
 {
     const int arraySize = 12;
     double array[arraySize] = {12.0, 21.5, 119.2, -80.7, 300.0, 75.5, 81.2, 8.1,

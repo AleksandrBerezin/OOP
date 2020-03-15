@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Task_2_3()
+void Task_1_2_3()
 {
     const int arraySize = 8;
     char array[arraySize];

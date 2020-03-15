@@ -19,7 +19,7 @@ void DemoGetPower(double base, int exponent)
 	cout << base << " ^ " << exponent << " = " << result << "\n";
 }
 
-void Task_3_3()
+void Task_1_3_3()
 {
 	DemoGetPower(2.0, 5);
 	DemoGetPower(3.0, 4);

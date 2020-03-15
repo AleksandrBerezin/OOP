@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Task_4_3()
+void Task_1_4_3()
 {
 	int a = 5;
 	int& b = a;

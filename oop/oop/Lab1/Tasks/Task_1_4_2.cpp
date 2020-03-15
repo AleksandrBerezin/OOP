@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Task_4_2()
+void Task_1_4_2()
 {
 	int a[10] = {1, 2, 7, -1, 5, 3, -1, 7, 1, 6};
 	cout << "Size of int type: " << sizeof(int) << endl;

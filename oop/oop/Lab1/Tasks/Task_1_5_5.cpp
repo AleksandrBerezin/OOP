@@ -15,7 +15,7 @@ int SearchIndexByValue(int array[], int length, int value)
     return -1;
 }
 
-void Task_5_5()
+void Task_1_5_5()
 {
     int arraySize = 10;
     int* array = new int[arraySize] {1, 15, -8, -3, 12, 38, 0, 4, 16, 4};

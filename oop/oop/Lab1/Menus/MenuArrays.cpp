@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../../Common/CommonLibrary.h"
-#include "../Tasks/Tasks.h"
+#include "../Tasks/TasksLab1.h"
 
 using namespace std;
 
@@ -22,17 +22,17 @@ void MenuArrays()
 		{
 			case 1:
 			{
-				Task_2_1();
+				Task_1_2_1();
 				break;
 			}
 			case 2:
 			{
-				Task_2_2();
+				Task_1_2_2();
 				break;
 			}
 			case 3:
 			{
-				Task_2_3();
+				Task_1_2_3();
 				break;
 			}
 			case 0:

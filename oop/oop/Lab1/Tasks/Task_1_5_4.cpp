@@ -18,7 +18,7 @@ void SortDoubleArray(double array[], int size)
     }
 }
 
-void Task_5_4()
+void Task_1_5_4()
 {
     int arraySize = 10;
     double* array = new double[arraySize] {1.0, 15.0, -8.2, -3.5, 12.6, 38.4,

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Task_5_2()
+void Task_1_5_2()
 {
     int arraySize = 8;
     bool* array = new bool[arraySize] {true, false, true, true, false, true, false, false};

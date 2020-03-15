@@ -12,7 +12,7 @@ void Foo(double* a)
 	cout << "New value in pointer address: " << *a << endl;
 }
 
-void Task_4_8()
+void Task_1_4_8()
 {
 	double a = 5.0;
 	double* pointer = &a;

@@ -26,7 +26,7 @@ int CountPositiveValues(int* values, int count)
     return result;
 }
 
-void Task_5_8()
+void Task_1_5_8()
 {
     int count = 15;
     int* values = ReadArray(count);

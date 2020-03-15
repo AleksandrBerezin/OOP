@@ -11,7 +11,7 @@ void Foo(double a)
 	cout << "New value of a in Foo(): " << a << endl;
 }
 
-void Task_4_4()
+void Task_1_4_4()
 {
 	double a = 5.0;
 	cout << "Address of a in main(): " << &a << endl;
