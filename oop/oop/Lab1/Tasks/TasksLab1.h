@@ -1,0 +1,24 @@
+#pragma once
+
+void Task_1_1_1();
+void Task_1_1_2();
+void Task_1_2_1();
+void Task_1_2_2();
+void Task_1_2_3();
+void Task_1_3_3();
+void Task_1_3_4();
+void Task_1_4_1();
+void Task_1_4_2();
+void Task_1_4_3();
+void Task_1_4_4();
+void Task_1_4_5();
+void Task_1_4_6();
+void Task_1_4_8();
+void Task_1_5_1();
+void Task_1_5_2();
+void Task_1_5_3();
+void Task_1_5_4();
+void Task_1_5_5();
+void Task_1_5_6();
+void Task_1_5_7();
+void Task_1_5_8();

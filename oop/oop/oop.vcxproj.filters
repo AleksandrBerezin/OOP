@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Lab1">
+      <UniqueIdentifier>{d1678cc6-bec9-4488-a797-79f30ab49e9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab1\Tasks">
+      <UniqueIdentifier>{8787b984-f4e5-4a1f-bd96-226f2ccfc32d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab1\Menus">
+      <UniqueIdentifier>{b235c6c6-839c-4930-9ee2-35663f270825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lab1">
+      <UniqueIdentifier>{9f82dfb8-c247-4ed6-b14c-b00cd9856334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{52c2e757-f272-44e9-95e6-c4598f6c4a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{02b8b6b4-6804-4dbc-af84-87b9cd0518c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lab1\Tasks">
+      <UniqueIdentifier>{0f22634c-4801-4ac2-a470-d12276e6bac0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Lab1\Tasks\Task_1_1.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_1_2.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_2_1.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_2_2.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_2_3.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_3_3.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_3_4.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_4_1.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_4_2.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_4_3.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_4_4.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_4_5.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_4_6.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_4_8.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_5_1.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_5_2.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_5_3.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_5_4.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_5_5.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_5_6.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_5_7.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Tasks\Task_5_8.cpp">
+      <Filter>Source Files\Lab1\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Menus\MenuAddressesAndPointers.cpp">
+      <Filter>Source Files\Lab1\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Menus\MenuAlgoritmsAndDebugging.cpp">
+      <Filter>Source Files\Lab1\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Menus\MenuArrays.cpp">
+      <Filter>Source Files\Lab1\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Menus\MenuDynamicMemory.cpp">
+      <Filter>Source Files\Lab1\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Menus\MenuFunctions.cpp">
+      <Filter>Source Files\Lab1\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CommonLibrary.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\MenuLab1.cpp">
+      <Filter>Source Files\Lab1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\CommonLibrary.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab1\Menus\MenusLab1.h">
+      <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Menus.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab1\Tasks\Tasks.h">
+      <Filter>Header Files\Lab1\Tasks</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
