@@ -8,7 +8,7 @@ using namespace std;
 
 static void DemoMovieWithGenre()
 {
-	Movie movie;
+	MovieWithGenre movie;
 	movie.Title = "1 + 1";
 	movie.DurationInMinutes = 110;
 	movie.Year = 2015;

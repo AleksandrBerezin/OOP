@@ -77,7 +77,7 @@ Genre ReadGenre()
 	}
 }
 
-void InitMovie(Movie& movie, string title, int durationInMinutes, int year, 
+void InitMovie(MovieWithGenre& movie, string title, int durationInMinutes, int year, 
 	Genre genre, double rating)
 {
 	movie.Title = title;

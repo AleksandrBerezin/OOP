@@ -4,7 +4,7 @@
 
 using std::string;
 
-struct Movie
+struct MovieWithGenre
 {
 	string Title;
 	int DurationInMinutes;
@@ -13,9 +13,9 @@ struct Movie
 	double Rating;
 };
 
-Movie* MakeMovie(string title, int durationInMinutes, int year, Genre genre,
+MovieWithGenre* MakeMovie(string title, int durationInMinutes, int year, Genre genre,
 	double rating);
 void WriteGenre(Genre genre);
 Genre ReadGenre();
-void InitMovie(Movie& movie, string title, int durationInMinutes, int year, 
+void InitMovie(MovieWithGenre& movie, string title, int durationInMinutes, int year,
 	Genre genre, double rating);

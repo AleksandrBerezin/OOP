@@ -4,12 +4,12 @@
 
 using namespace std;
 
-// Исправленная структура Movie находится в файле MovieWithGenre.h
+// Исправленная структура MovieWithGenre находится в файле MovieWithGenre.h
 
-Movie* MakeMovie(string title, int durationInMinutes, int year, Genre genre,
+MovieWithGenre* MakeMovie(string title, int durationInMinutes, int year, Genre genre,
 	double rating)
 {
-	Movie* movie = new Movie();
+	MovieWithGenre* movie = new MovieWithGenre();
 	movie->Title = title;
 	movie->DurationInMinutes = durationInMinutes;
 	movie->Year = year;
@@ -21,14 +21,14 @@ Movie* MakeMovie(string title, int durationInMinutes, int year, Genre genre,
 
 static void DemoMovieWithGenre()
 {
-	Movie movie;
+	MovieWithGenre movie;
 	movie.Title = "1 + 1";
 	movie.DurationInMinutes = 110;
 	movie.Year = 2015;
 	movie.Genre = Drama;
 	movie.Rating = 8.9;
 
-	Movie* movie2 = MakeMovie("Avengers", 120, 2012, Action, 7.7);
+	MovieWithGenre* movie2 = MakeMovie("Avengers", 120, 2012, Action, 7.7);
 
 	delete movie2;
 }
