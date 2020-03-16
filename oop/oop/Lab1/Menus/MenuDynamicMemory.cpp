@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../../Common/CommonLibrary.h"
-#include "../Tasks/Tasks.h"
+#include "../Tasks/TasksLab1.h"
 
 using namespace std;
 
@@ -27,42 +27,42 @@ void MenuDynamicMemory()
 		{
 			case 1:
 			{
-				Task_5_1();
+				Task_1_5_1();
 				break;
 			}
 			case 2:
 			{
-				Task_5_2();
+				Task_1_5_2();
 				break;
 			}
 			case 3:
 			{
-				Task_5_3();
+				Task_1_5_3();
 				break;
 			}
 			case 4:
 			{
-				Task_5_4();
+				Task_1_5_4();
 				break;
 			}
 			case 5:
 			{
-				Task_5_5();
+				Task_1_5_5();
 				break;
 			}
 			case 6:
 			{
-				Task_5_6();
+				Task_1_5_6();
 				break;
 			}
 			case 7:
 			{
-				Task_5_7();
+				Task_1_5_7();
 				break;
 			}
 			case 8:
 			{
-				Task_5_8();
+				Task_1_5_8();
 				break;
 			}
 			case 0:

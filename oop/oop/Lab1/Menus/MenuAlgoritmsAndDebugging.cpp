@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../../Common/CommonLibrary.h"
-#include "../Tasks/Tasks.h"
+#include "../Tasks/TasksLab1.h"
 
 using namespace std;
 
@@ -21,12 +21,12 @@ void MenuAlgoritmsAndDebugging()
 		{
 			case 1:
 			{
-				Task_1_1();
+				Task_1_1_1();
 				break;
 			}
 			case 2:
 			{
-				Task_1_2();
+				Task_1_1_2();
 				break;
 			}
 			case 0:

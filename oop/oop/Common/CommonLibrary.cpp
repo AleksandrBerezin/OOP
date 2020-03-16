@@ -1,4 +1,5 @@
 #include <iostream>
+#include "CommonLibrary.h"
 
 using namespace std;
 
@@ -23,4 +24,15 @@ int InputInt()
 	}
 
 	return number;
+}
+
+void PrintNumberOfTask(string number)
+{
+	cout << endl << "------------" << endl;
+	cout << "|Task " << number << "|" << endl;
+	cout << "------------" << endl;
+}
+
+void PrintNumbersOfTask(string firstNumber, string secondNumber)
+{
 }

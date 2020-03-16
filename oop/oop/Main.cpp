@@ -6,6 +6,8 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
+
 	bool isExit = false;
 
 	while (!isExit)

@@ -1,0 +1,22 @@
+#pragma once
+
+void Task_2_1_2();
+void Task_2_3_2();
+void Task_2_3_3();
+void Task_2_4_1();
+void Task_2_4_2();
+void Task_2_4_3();
+void Task_2_5_3();
+void Task_2_5_4();
+void Task_2_5_5();
+void Task_2_5_6();
+void Task_2_6_1();
+void Task_2_6_3();
+void Task_2_7_2();
+void Task_2_7_3();
+void Task_2_8_5();
+void Task_2_8_6();
+void Task_2_8_7();
+void Task_2_8_8();
+void Task_2_9_4();
+void Task_2_9_5();

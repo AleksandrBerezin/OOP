@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../../Common/CommonLibrary.h"
-#include "../Tasks/Tasks.h"
+#include "../Tasks/TasksLab1.h"
 
 using namespace std;
 
@@ -26,37 +26,37 @@ void MenuAddressesAndPointers()
 		{
 			case 1:
 			{
-				Task_4_1();
+				Task_1_4_1();
 				break;
 			}
 			case 2:
 			{
-				Task_4_2();
+				Task_1_4_2();
 				break;
 			}
 			case 3:
 			{
-				Task_4_3();
+				Task_1_4_3();
 				break;
 			}
 			case 4:
 			{
-				Task_4_4();
+				Task_1_4_4();
 				break;
 			}
 			case 5:
 			{
-				Task_4_5();
+				Task_1_4_5();
 				break;
 			}
 			case 6:
 			{
-				Task_4_6();
+				Task_1_4_6();
 				break;
 			}
 			case 7:
 			{
-				Task_4_8();
+				Task_1_4_8();
 				break;
 			}
 			case 0:
