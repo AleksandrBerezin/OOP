@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "Enums.h"
 #include "Color.h"
 
@@ -6,6 +6,7 @@ using namespace std;
 
 int CountRed(Color* colors, int count)
 {
+	// TODO: код дублируется с функцией CountColor из следующего задания. Избавься от дублирования (да, я знаю, такого не было в задании)
 	int countRed = 0;
 
 	for (int i = 0; i < count; i++)

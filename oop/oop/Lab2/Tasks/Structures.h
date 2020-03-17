@@ -1,9 +1,9 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include "Enums.h"
 
 using std::string;
-
+// TODO: каждую структуру в отдельный файл. Функции по работе со структурой туда же
 struct Rectangle
 {
 	double Length;

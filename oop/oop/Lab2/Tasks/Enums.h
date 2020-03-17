@@ -1,5 +1,5 @@
-#pragma once
-
+﻿#pragma once
+// TODO: все перечисления в отдельный файл
 enum Color
 {
 	Red,
@@ -10,7 +10,7 @@ enum Color
 	DarkBlue,
 	Violet
 };
-
+// TODO: WeekDay - 1) см. образование родительного падежа в англ. языке; of и the - нежелательны в названиях переменных и функциях
 enum DayOfTheWeek
 {
 	Monday,

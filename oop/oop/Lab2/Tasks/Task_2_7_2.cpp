@@ -1,8 +1,8 @@
-#include <iostream>
+﻿#include <iostream>
 #include "Structures.h"
 
 using namespace std;
-
+// TODO: сделай cpp-файлы для работы с каждой отдельной структурой, чтобы нумерация была не по заданиям, а по самим структурам
 Rectangle* MakeRectangle(int length, int width, string color)
 {
 	Rectangle* rectangle = new Rectangle();

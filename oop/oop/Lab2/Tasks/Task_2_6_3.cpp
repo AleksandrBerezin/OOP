@@ -1,10 +1,11 @@
-#include <iostream>
+﻿#include <iostream>
 #include "Structures.h"
 
 using namespace std;
 
 void FindShortestFlight(Flight* flights, int count)
 {
+	// TODO: сделать через возврат указателя
 	int minTime = flights[0].FlightTimeInMinutes;
 	int index = 0;
 

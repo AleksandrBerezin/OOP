@@ -32,7 +32,7 @@ void PrintNumberOfTask(string number)
 	cout << "|Task " << number << "|" << endl;
 	cout << "------------" << endl;
 }
-
+// TODO: что за пустая функция?
 void PrintNumbersOfTask(string firstNumber, string secondNumber)
 {
 }

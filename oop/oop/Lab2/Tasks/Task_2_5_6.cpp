@@ -1,11 +1,12 @@
-#include <iostream>
+﻿#include <iostream>
 #include "Structures.h"
 
 using namespace std;
 
-// ����� �������������� � ���������� ��������
+// Ïîèñê ïðÿìîóãîëüíèêà ñ íàèáîëüøåé ïëîùàäüþ
 void FindMaxRectangle(Rectangle* rectangles, int count)
 {
+	// TODO: также сделать через возвращение указателя на найденный объект
 	int maxSquare = 0;
 	int index = 0;
 

@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "Structures.h"
 
 using namespace std;
@@ -113,4 +113,5 @@ void Task_2_7_3()
 	Time* time2 = CopyTime(time);
 	cout << "Current time: " << time2->Hours << " hours, " << time2->Minutes
 		<< " minutes and " << time2->Seconds << " seconds." << endl;
+	// TODO: утечка памяти
 }

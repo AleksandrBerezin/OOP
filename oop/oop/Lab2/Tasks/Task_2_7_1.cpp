@@ -1,11 +1,11 @@
-#include <iostream>
+﻿#include <iostream>
 
 using namespace std;
 
 struct Circle
 {
-	double X;			// X-���������� ������ �����
-	double Y;			// Y-���������� ������ �����
+	double X;			// X-êîîðäèíàòà öåíòðà êðóãà
+	double Y;			// Y-êîîðäèíàòà öåíòðà êðóãà
 	double Radius;
 	string Color;
 };
@@ -23,6 +23,7 @@ Circle* MakeCircle(double x, double y, double radius, string color)
 
 Circle* CopyCircle(Circle& circle)
 {
+	// TODO: сделать через вызов функции-конструктора
 	Circle* copiedCircle = new Circle();
 	copiedCircle->X = circle.X;
 	copiedCircle->Y = circle.Y;
@@ -41,4 +42,5 @@ void DemoCircle()
 	Circle* copiedCircle1 = CopyCircle(*circle1);
 	Circle* copiedCircle2 = CopyCircle(*circle2);
 	Circle* copiedCircle3 = CopyCircle(*circle3);
+	// TODO: утечка памяти, поправить
 }

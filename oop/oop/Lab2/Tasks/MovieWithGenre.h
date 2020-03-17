@@ -1,9 +1,10 @@
-#pragma once
+﻿#pragma once
 #include "Enums.h"
 #include <string>
 
 using std::string;
 
+// TODO: в принципе, двух структур Movie в программе не надо. Оставь только одну, которая работает с перечислением
 struct MovieWithGenre
 {
 	string Title;
