@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "CommonLibrary.h"
 
 using namespace std;
@@ -31,8 +31,4 @@ void PrintNumberOfTask(string number)
 	cout << endl << "------------" << endl;
 	cout << "|Task " << number << "|" << endl;
 	cout << "------------" << endl;
-}
-// TODO: что за пустая функция?
-void PrintNumbersOfTask(string firstNumber, string secondNumber)
-{
 }

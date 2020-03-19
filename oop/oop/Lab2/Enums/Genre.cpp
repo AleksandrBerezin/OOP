@@ -1,6 +1,5 @@
-#include <iostream>
-#include "Enums.h"
-#include "MovieWithGenre.h"
+﻿#include <iostream>
+#include "Genre.h"
 #include "../../Common/CommonLibrary.h"
 
 using namespace std;
@@ -44,7 +43,8 @@ void WriteGenre(Genre genre)
 
 Genre ReadGenre()
 {
-	cout << endl << "Enter number from 0 to 6 (0 - Comedy, 1 - Drama, 2 - Thriller,"
+	cout << endl << "Enter movie genre:" << endl;
+	cout << "Enter number from 0 to 6 (0 - Comedy, 1 - Drama, 2 - Thriller,"
 		<< " 3 - Action, 4 - Horror, 5 - Blockbuster):" << endl;
 	cout << "> ";
 
@@ -77,12 +77,15 @@ Genre ReadGenre()
 	}
 }
 
-void InitMovie(MovieWithGenre& movie, string title, int durationInMinutes, int year, 
-	Genre genre, double rating)
+void DemoGenre_2_8_4()
 {
-	movie.Title = title;
-	movie.DurationInMinutes = durationInMinutes;
-	movie.Year = year;
-	movie.Genre = genre;
-	movie.Rating = rating;
+	Genre genre = Action;
+
+	Genre genres[6];
+	genres[0] = Comedy;
+	genres[1] = Drama;
+	genres[2] = Thriller;
+	genres[3] = Action;
+	genres[4] = Horror;
+	genres[5] = Blockbuster;
 }

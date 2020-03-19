@@ -1,14 +1,8 @@
 ﻿#include <iostream>
+#include <string>
+#include "Circle.h"
 
 using namespace std;
-
-struct Circle
-{
-	double X;			// X-êîîðäèíàòà öåíòðà êðóãà
-	double Y;			// Y-êîîðäèíàòà öåíòðà êðóãà
-	double Radius;
-	string Color;
-};
 
 Circle* MakeCircle(double x, double y, double radius, string color)
 {
@@ -23,12 +17,9 @@ Circle* MakeCircle(double x, double y, double radius, string color)
 
 Circle* CopyCircle(Circle& circle)
 {
-	// TODO: сделать через вызов функции-конструктора
+	// TODO: сделать через вызов функции-конструктора (Done)
 	Circle* copiedCircle = new Circle();
-	copiedCircle->X = circle.X;
-	copiedCircle->Y = circle.Y;
-	copiedCircle->Radius = circle.Radius;
-	copiedCircle->Color = circle.Color;
+	copiedCircle = MakeCircle(circle.X, circle.Y, circle.Radius, circle.Color);
 
 	return copiedCircle;
 }
@@ -42,5 +33,11 @@ void DemoCircle()
 	Circle* copiedCircle1 = CopyCircle(*circle1);
 	Circle* copiedCircle2 = CopyCircle(*circle2);
 	Circle* copiedCircle3 = CopyCircle(*circle3);
-	// TODO: утечка памяти, поправить
+	// TODO: утечка памяти, поправить (Done)
+	delete circle1;
+	delete circle2;
+	delete circle3;
+	delete copiedCircle1;
+	delete copiedCircle2;
+	delete copiedCircle3;
 }
