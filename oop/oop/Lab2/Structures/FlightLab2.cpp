@@ -1,9 +1,9 @@
 ﻿#include <iostream>
-#include "Flight.h"
+#include "FlightLab2.h"
 
 using namespace std;
 
-void WriteFlight(Flight& flight)
+void WriteFlight(FlightLab2& flight)
 {
 	cout << endl << "The flight from " << flight.DeparturePoint << " to "
 		<< flight.DestinationPoint << " will last " << flight.FlightTimeInMinutes
@@ -12,13 +12,13 @@ void WriteFlight(Flight& flight)
 
 void DemoFlight_2_3_2()
 {
-	Flight flight;
+	FlightLab2 flight;
 
 	flight.DeparturePoint = "Tomsk";
 	flight.DestinationPoint = "Moscow";
 	flight.FlightTimeInMinutes = 240;
 
-	Flight flight2;
+	FlightLab2 flight2;
 
 	cout << endl << "Enter departure point:" << endl << "> ";
 	cin >> flight2.DeparturePoint;
@@ -32,7 +32,7 @@ void DemoFlight_2_3_2()
 
 void DemoFlight_2_3_3()
 {
-	Flight flights[5];
+	FlightLab2 flights[5];
 
 	flights[0].DeparturePoint = "Tomsk";
 	flights[0].DestinationPoint = "Moscow";
@@ -65,14 +65,14 @@ void DemoFlight_2_3_3()
 
 void DemoFlight_2_4_3()
 {
-	Flight flight;
+	FlightLab2 flight;
 
 	flight.DeparturePoint = "Tomsk";
 	flight.DestinationPoint = "Moscow";
 	flight.FlightTimeInMinutes = 240;
 
-	Flight* pointer1 = &flight;
-	Flight* pointer2 = &flight;
+	FlightLab2* pointer1 = &flight;
+	FlightLab2* pointer2 = &flight;
 
 	cout << endl << "Flight:" << endl;
 	cout << "Address in first pointer: " << pointer1 << endl;
@@ -81,7 +81,7 @@ void DemoFlight_2_4_3()
 
 void DemoDynamicFlight_2_6_1()
 {
-	Flight* flight = new Flight();
+	FlightLab2* flight = new FlightLab2();
 
 	flight->DeparturePoint = "Tomsk";
 	flight->DestinationPoint = "Moscow";
@@ -92,7 +92,7 @@ void DemoDynamicFlight_2_6_1()
 	delete flight;
 }
 
-Flight* FindShortestFlight(Flight* flights, int count)
+FlightLab2* FindShortestFlight(FlightLab2* flights, int count)
 {
 	// TODO: сделать через возврат указателя (Done)
 	int minTime = flights[0].FlightTimeInMinutes;
@@ -113,7 +113,7 @@ Flight* FindShortestFlight(Flight* flights, int count)
 void DemoDynamicFlights_2_6_3()
 {
 	int count = 4;
-	Flight* flights = new Flight[count];
+	FlightLab2* flights = new FlightLab2[count];
 
 	flights[0].DeparturePoint = "Tomsk";
 	flights[0].DestinationPoint = "Moscow";
@@ -139,7 +139,7 @@ void DemoDynamicFlights_2_6_3()
 			<< flights[i].FlightTimeInMinutes << " minutes." << endl;
 	}
 
-	Flight* shortestFlight = FindShortestFlight(flights, count);
+	FlightLab2* shortestFlight = FindShortestFlight(flights, count);
 
 	cout << endl << "The shortest flight: from " << shortestFlight->DeparturePoint
 		<< " to " << shortestFlight->DestinationPoint << " will last "
@@ -148,9 +148,9 @@ void DemoDynamicFlights_2_6_3()
 	delete[] flights;
 }
 
-Flight* MakeFlight(string departurePoint, string destinationPoint, int flightTimeInMinutes)
+FlightLab2* MakeFlight(string departurePoint, string destinationPoint, int flightTimeInMinutes)
 {
-	Flight* flight = new Flight();
+	FlightLab2* flight = new FlightLab2();
 	flight->DeparturePoint = departurePoint;
 	flight->DestinationPoint = destinationPoint;
 	flight->FlightTimeInMinutes = flightTimeInMinutes;
@@ -163,13 +163,13 @@ void DemoFlight_2_7_2()
 	cout << endl << "Verifying that constructor function are working correctly."
 		<< endl;
 
-	Flight* flight = MakeFlight("Tomsk", "Moscow", 240);
+	FlightLab2* flight = MakeFlight("Tomsk", "Moscow", 240);
 	WriteFlight(*flight);
 }
 
-Flight* CopyFlight(Flight& flight)
+FlightLab2* CopyFlight(FlightLab2& flight)
 {
-	Flight* copiedFlight = new Flight();
+	FlightLab2* copiedFlight = new FlightLab2();
 	copiedFlight->DeparturePoint = flight.DeparturePoint;
 	copiedFlight->DestinationPoint = flight.DestinationPoint;
 	copiedFlight->FlightTimeInMinutes = flight.FlightTimeInMinutes;
@@ -184,7 +184,7 @@ void DemoFlight_2_7_3()
 
 	cout << "Data before copying:" << endl;
 	
-	Flight flight;
+	FlightLab2 flight;
 
 	flight.DeparturePoint = "Tomsk";
 	flight.DestinationPoint = "Moscow";
@@ -194,7 +194,7 @@ void DemoFlight_2_7_3()
 
 	cout << endl << "Data after copying:" << endl;
 
-	Flight* flight2 = CopyFlight(flight);
+	FlightLab2* flight2 = CopyFlight(flight);
 	WriteFlight(*flight2);
 
 	delete flight2;

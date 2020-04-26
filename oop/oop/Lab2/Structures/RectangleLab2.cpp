@@ -1,17 +1,18 @@
-﻿#include <iostream>
-#include "Rectangle.h"
+﻿#pragma once
+#include <iostream>
+#include "RectangleLab2.h"
 
 using namespace std;
 
 void DemoRectangle_2_3_2()
 {
-	Rectangle rectangle;
+	RectangleLab2 rectangle;
 
 	rectangle.Length = 25;
 	rectangle.Width = 17;
 	rectangle.Color = "red";
 
-	Rectangle rectangle2;
+	RectangleLab2 rectangle2;
 
 	ReadRectangle(rectangle2);
 	WriteRectangle(rectangle2);
@@ -19,7 +20,7 @@ void DemoRectangle_2_3_2()
 
 void DemoRectangle_2_3_3()
 {
-	Rectangle rectangles[3];
+	RectangleLab2 rectangles[3];
 
 	rectangles[0].Length = 25;
 	rectangles[0].Width = 17;
@@ -44,13 +45,13 @@ void DemoRectangle_2_3_3()
 
 void DemoRectangle_2_4_1()
 {
-	Rectangle rectangle;
+	RectangleLab2 rectangle;
 
 	rectangle.Length = 25;
 	rectangle.Width = 17;
 	rectangle.Color = "red";
 
-	Rectangle* pointer = &rectangle;
+	RectangleLab2* pointer = &rectangle;
 	WriteRectangle(rectangle);
 
 	pointer->Length = 20;
@@ -63,27 +64,27 @@ void DemoRectangle_2_4_1()
 
 void DemoRectangle_2_4_2()
 {
-	Rectangle rectangle;
+	RectangleLab2 rectangle;
 
 	rectangle.Length = 25;
 	rectangle.Width = 17;
 	rectangle.Color = "red";
 
-	Rectangle* pointer1 = &rectangle;
-	Rectangle* pointer2 = &rectangle;
+	RectangleLab2* pointer1 = &rectangle;
+	RectangleLab2* pointer2 = &rectangle;
 
 	cout << endl << "Rectangle:" << endl;
 	cout << "Address in first pointer: " << pointer1 << endl;
 	cout << "Address in second pointer: " << pointer2 << endl;
 }
 
-void WriteRectangle(Rectangle& rectangle)
+void WriteRectangle(RectangleLab2& rectangle)
 {
 	cout << endl << "The rectangle size: " << rectangle.Length << " x " << rectangle.Width
 		<< ". The rectangle color is " << rectangle.Color << "." << endl;
 }
 
-void ReadRectangle(Rectangle& rectangle)
+void ReadRectangle(RectangleLab2& rectangle)
 {
 	cout << endl << "Enter rectangle length (positive number):" << endl << "> ";
 	cin >> rectangle.Length;
@@ -96,7 +97,7 @@ void ReadRectangle(Rectangle& rectangle)
 void DemoReadAndWriteRectangles_2_5_3()
 {
 	const int arraySize = 5;
-	Rectangle rectangles[arraySize];
+	RectangleLab2 rectangles[arraySize];
 
 	for (int i = 0; i < arraySize; i++)
 	{
@@ -109,7 +110,7 @@ void DemoReadAndWriteRectangles_2_5_3()
 	}
 }
 
-void Exchange(Rectangle& rectangle1, Rectangle& rectangle2)
+void Exchange(RectangleLab2& rectangle1, RectangleLab2& rectangle2)
 {
 	int tempLength = rectangle1.Length;
 	rectangle1.Length = rectangle2.Length;
@@ -126,8 +127,8 @@ void Exchange(Rectangle& rectangle1, Rectangle& rectangle2)
 
 void DemoRectangle_2_5_4()
 {
-	Rectangle rectangle1;
-	Rectangle rectangle2;
+	RectangleLab2 rectangle1;
+	RectangleLab2 rectangle2;
 
 	rectangle1.Length = 25;
 	rectangle1.Width = 17;
@@ -148,7 +149,7 @@ void DemoRectangle_2_5_4()
 	WriteRectangle(rectangle2);
 }
 
-Rectangle* FindRectangle(Rectangle* rectangles, int count)
+RectangleLab2* FindRectangle(RectangleLab2* rectangles, int count)
 {// TODO: переделай, чтобы функция возвращала указатель на найденный прямоугольник, а вывод на экран производился в DemoRectangle() (Done)
 	int maxLength = 0;
 	int index = 0;
@@ -167,7 +168,7 @@ Rectangle* FindRectangle(Rectangle* rectangles, int count)
 
 void DemoRectangle_2_5_5()
 {
-	Rectangle rectangles[3];
+	RectangleLab2 rectangles[3];
 
 	rectangles[0].Length = 25;
 	rectangles[0].Width = 17;
@@ -189,13 +190,13 @@ void DemoRectangle_2_5_5()
 			<< "." << endl;
 	}
 
-	Rectangle* findedRectangle = FindRectangle(rectangles, 3);
+	RectangleLab2* findedRectangle = FindRectangle(rectangles, 3);
 
 	cout << endl << "The rectangle with max length has a size: " << findedRectangle->Length
 		<< " x " << findedRectangle->Width << "." << endl;
 }
 
-Rectangle* FindMaxRectangle(Rectangle* rectangles, int count)
+RectangleLab2* FindMaxRectangle(RectangleLab2* rectangles, int count)
 {
 	// TODO: также сделать через возвращение указателя на найденный объект (Done)
 	int maxSquare = 0;
@@ -217,7 +218,7 @@ Rectangle* FindMaxRectangle(Rectangle* rectangles, int count)
 
 void DemoRectangle_2_5_6()
 {
-	Rectangle rectangles[3];
+	RectangleLab2 rectangles[3];
 
 	rectangles[0].Length = 25;
 	rectangles[0].Width = 17;
@@ -239,16 +240,16 @@ void DemoRectangle_2_5_6()
 			<< "." << endl;
 	}
 
-	Rectangle* maxRectangle = FindMaxRectangle(rectangles, 3);
+	RectangleLab2* maxRectangle = FindMaxRectangle(rectangles, 3);
 
 	cout << endl << "The rectangle with max square has a size: " << maxRectangle->Length
 		<< " x " << maxRectangle->Width << ". The square of the rectangle is "
 		<< maxRectangle->Length * maxRectangle->Width << "." << endl;
 }
 
-Rectangle* MakeRectangle(int length, int width, string color)
+RectangleLab2* MakeRectangle(int length, int width, string color)
 {
-	Rectangle* rectangle = new Rectangle();
+	RectangleLab2* rectangle = new RectangleLab2();
 	rectangle->Length = length;
 	rectangle->Width = width;
 	rectangle->Color = color;
@@ -261,14 +262,14 @@ void DemoRectangle_2_7_2()
 	cout << endl << "Verifying that constructor function are working correctly."
 		<< endl << endl;
 
-	Rectangle* rectangle = MakeRectangle(25, 17, "red");
+	RectangleLab2* rectangle = MakeRectangle(25, 17, "red");
 	cout << "The rectangle size: " << rectangle->Length << " x " << rectangle->Width
 		<< ". The rectangle color is " << rectangle->Color << "." << endl;
 }
 
-Rectangle* CopyRectangle(Rectangle& rectangle)
+RectangleLab2* CopyRectangle(RectangleLab2& rectangle)
 {
-	Rectangle* copiedRectangle = new Rectangle();
+	RectangleLab2* copiedRectangle = new RectangleLab2();
 	copiedRectangle->Length = rectangle.Length;
 	copiedRectangle->Width = rectangle.Width;
 	copiedRectangle->Color = rectangle.Color;
@@ -283,7 +284,7 @@ void DemoRectangle_2_7_3()
 
 	cout << "Data before copying:" << endl << endl;
 
-	Rectangle rectangle;
+	RectangleLab2 rectangle;
 	rectangle.Length = 25;
 	rectangle.Width = 17;
 	rectangle.Color = "red";
@@ -293,7 +294,7 @@ void DemoRectangle_2_7_3()
 
 	cout << endl << "Data after copying:" << endl << endl;
 
-	Rectangle* rectangle2 = CopyRectangle(rectangle);
+	RectangleLab2* rectangle2 = CopyRectangle(rectangle);
 	cout << "The rectangle size: " << rectangle2->Length << " x " << rectangle2->Width
 		<< ". The rectangle color is " << rectangle2->Color << "." << endl;
 

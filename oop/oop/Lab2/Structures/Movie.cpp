@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include "Movie.h"
-#include "../Enums/Genre.h"
+#include "../Enums/MovieGenre.h"
 
 using namespace std;
 
@@ -95,7 +95,7 @@ void DemoMovie_2_4_3()
 	cout << "Address in second pointer: " << pointer2 << endl;
 }
 
-Movie* MakeMovie(string title, int durationInMinutes, int year, Genre genre, double rating)
+Movie* MakeMovie(string title, int durationInMinutes, int year, MovieGenre genre, double rating)
 {
 	Movie* movie = new Movie();
 	movie->Title = title;
@@ -165,7 +165,7 @@ void DemoMovieWithGenre_2_9_3()
 	delete movie2;
 }
 
-int CountMoviesByGenre(Movie* movies, int count, Genre findGenre)
+int CountMoviesByGenre(Movie* movies, int count, MovieGenre findGenre)
 {
 	int countGenre = 0;
 
@@ -208,14 +208,14 @@ void DemoMovieWithGenre_2_9_4()
 	}
 
 	cout << endl << "Enter finded genre:";
-	Genre findedGenre = ReadGenre();
+	MovieGenre findedGenre = ReadGenre();
 	cout << "The number of movies of the finded genre in the array: "
 		<< CountMoviesByGenre(movies, count, findedGenre) << "." << endl;
 
 	delete[] movies;
 }
 
-Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
+Movie* FindBestGenreMovie(Movie* movies, int count, MovieGenre findGenre)
 {
 	int index = -1;
 	double rating = -1;

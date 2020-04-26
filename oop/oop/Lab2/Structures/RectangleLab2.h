@@ -3,20 +3,20 @@
 
 using std::string;
 
-struct Rectangle
+struct RectangleLab2
 {
 	double Length;
 	double Width;
 	string Color;
 };
 // TODO: в один файл со структурой (Done)
-void ReadRectangle(Rectangle& rectangle);
-void WriteRectangle(Rectangle& rectangle);
-void Exchange(Rectangle& rectangle1, Rectangle& rectangle2);
-Rectangle* FindRectangle(Rectangle* rectangles, int count);
-Rectangle* FindMaxRectangle(Rectangle* rectangles, int count);
-Rectangle* MakeRectangle(int length, int width, string color);
-Rectangle* CopyRectangle(Rectangle& rectangle);
+void ReadRectangle(RectangleLab2& rectangle);
+void WriteRectangle(RectangleLab2& rectangle);
+void Exchange(RectangleLab2& rectangle1, RectangleLab2& rectangle2);
+RectangleLab2* FindRectangle(RectangleLab2* rectangles, int count);
+RectangleLab2* FindMaxRectangle(RectangleLab2* rectangles, int count);
+RectangleLab2* MakeRectangle(int length, int width, string color);
+RectangleLab2* CopyRectangle(RectangleLab2& rectangle);
 void DemoRectangle_2_3_2();
 void DemoRectangle_2_3_3();
 void DemoRectangle_2_4_1();

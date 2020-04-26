@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include <string>
-#include "../Enums/Genre.h"
+#include "../Enums/MovieGenre.h"
 
 using std::string;
 
@@ -9,15 +9,15 @@ struct Movie
 	string Title;
 	int DurationInMinutes;
 	int Year;
-	Genre Genre;
+	MovieGenre Genre;
 	double Rating;
 };
 
 void WriteMovie(Movie& movie);
-Movie* MakeMovie(string title, int durationInMinutes, int year, Genre genre, double rating);
+Movie* MakeMovie(string title, int durationInMinutes, int year, MovieGenre genre, double rating);
 Movie* CopyMovie(Movie& movie);
-int CountMoviesByGenre(Movie* movies, int count, Genre findGenre);
-Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre);
+int CountMoviesByGenre(Movie* movies, int count, MovieGenre findGenre);
+Movie* FindBestGenreMovie(Movie* movies, int count, MovieGenre findGenre);
 void DemoMovie_2_3_2();
 void DemoMovie_2_3_3();
 void DemoMovie_2_4_3();

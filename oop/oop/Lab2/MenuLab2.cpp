@@ -1,11 +1,12 @@
-﻿#include <iostream>
+﻿#pragma once
+#include <iostream>
 #include <conio.h>
 #include "../Common/CommonLibrary.h"
 #include "Enums/Color.h"
-#include "Structures/Flight.h"
+#include "Structures/FlightLab2.h"
 #include "Structures/Movie.h"
-#include "Structures/Rectangle.h"
-#include "Structures/Time.h"
+#include "Structures/RectangleLab2.h"
+#include "Structures/TimeLab2.h"
 
 using namespace std;
 

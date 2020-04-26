@@ -1,9 +1,9 @@
 ﻿#include <iostream>
-#include "Time.h"
+#include "TimeLab2.h"
 
 using namespace std;
 
-void WriteTime(Time& time)
+void WriteTime(TimeLab2& time)
 {
 	cout << endl << "Current time: " << time.Hours << " hours, " << time.Minutes
 		<< " minutes and " << time.Seconds << " seconds." << endl;
@@ -11,13 +11,13 @@ void WriteTime(Time& time)
 
 void DemoTime_2_3_2()
 {
-	Time time;
+	TimeLab2 time;
 
 	time.Hours = 17;
 	time.Minutes = 34;
 	time.Seconds = 22;
 
-	Time time2;
+	TimeLab2 time2;
 
 	cout << endl << "Enter hours (from 0 to 23):" << endl << "> ";
 	cin >> time2.Hours;
@@ -31,7 +31,7 @@ void DemoTime_2_3_2()
 
 void DemoTime_2_3_3()
 {
-	Time time[3];
+	TimeLab2 time[3];
 
 	time[0].Hours = 17;
 	time[0].Minutes = 34;
@@ -55,23 +55,23 @@ void DemoTime_2_3_3()
 
 void DemoTime_2_4_3()
 {
-	Time time;
+	TimeLab2 time;
 
 	time.Hours = 17;
 	time.Minutes = 34;
 	time.Seconds = 22;
 
-	Time* pointer1 = &time;
-	Time* pointer2 = &time;
+	TimeLab2* pointer1 = &time;
+	TimeLab2* pointer2 = &time;
 
 	cout << endl << "Time:" << endl;
 	cout << "Address in first pointer: " << pointer1 << endl;
 	cout << "Address in second pointer: " << pointer2 << endl;
 }
 
-Time* MakeTime(int hours, int minutes, int seconds)
+TimeLab2* MakeTime(int hours, int minutes, int seconds)
 {
-	Time* time = new Time();
+	TimeLab2* time = new TimeLab2();
 	time->Hours = hours;
 	time->Minutes = minutes;
 	time->Seconds = seconds;
@@ -82,13 +82,13 @@ Time* MakeTime(int hours, int minutes, int seconds)
 void DemoTime_2_7_2()
 {
 	cout << endl << "Verifying that constructor function are working correctly." << endl;
-	Time* time = MakeTime(17, 34, 22);
+	TimeLab2* time = MakeTime(17, 34, 22);
 	WriteTime(*time);
 }
 
-Time* CopyTime(Time& time)
+TimeLab2* CopyTime(TimeLab2& time)
 {
-	Time* copiedTime = new Time();
+	TimeLab2* copiedTime = new TimeLab2();
 	copiedTime->Hours = time.Hours;
 	copiedTime->Minutes = time.Minutes;
 	copiedTime->Seconds = time.Seconds;
@@ -103,14 +103,14 @@ void DemoTime_2_7_3()
 
 	cout << "Data before copying:" << endl;
 
-	Time time;
+	TimeLab2 time;
 	time.Hours = 17;
 	time.Minutes = 34;
 	time.Seconds = 22;
 
 	WriteTime(time);
 	cout << endl << "Data after copying:" << endl;
-	Time* time2 = CopyTime(time);
+	TimeLab2* time2 = CopyTime(time);
 	WriteTime(*time2);
 
 	delete time2;

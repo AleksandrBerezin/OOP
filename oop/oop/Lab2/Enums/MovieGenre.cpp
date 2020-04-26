@@ -1,10 +1,10 @@
 ﻿#include <iostream>
-#include "Genre.h"
+#include "MovieGenre.h"
 #include "../../Common/CommonLibrary.h"
 
 using namespace std;
 
-void WriteGenre(Genre genre)
+void WriteGenre(MovieGenre genre)
 {
 	switch (genre)
 	{
@@ -41,7 +41,7 @@ void WriteGenre(Genre genre)
 	}
 }
 
-Genre ReadGenre()
+MovieGenre ReadGenre()
 {
 	cout << endl << "Enter movie genre:" << endl;
 	cout << "Enter number from 0 to 6 (0 - Comedy, 1 - Drama, 2 - Thriller,"
@@ -79,9 +79,9 @@ Genre ReadGenre()
 
 void DemoGenre_2_8_4()
 {
-	Genre genre = Action;
+	MovieGenre genre = Action;
 
-	Genre genres[6];
+	MovieGenre genres[6];
 	genres[0] = Comedy;
 	genres[1] = Drama;
 	genres[2] = Thriller;

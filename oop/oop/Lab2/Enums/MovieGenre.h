@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-enum Genre
+enum MovieGenre
 {
 	Comedy,
 	Drama,
@@ -10,6 +10,6 @@ enum Genre
 	Blockbuster
 };
 
-void WriteGenre(Genre genre);
-Genre ReadGenre();
+void WriteGenre(MovieGenre genre);
+MovieGenre ReadGenre();
 void DemoGenre_2_8_4();
