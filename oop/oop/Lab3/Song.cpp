@@ -6,30 +6,51 @@
 
 using namespace std;
 
-Song* MakeSong(string title, int durationSeconds, Genre genre)
+string Song::GetTitle()
 {
-	Song* song = new Song();
-	SetTitle(*song, title);
-	SetDuration(*song, durationSeconds);
-	SetGenre(*song, genre);
-	return song;
+	return this->_title;
 }
 
-void SetTitle(Song& song, string title)
+int Song::GetDurationSeconds()
 {
-	song.Title = title;
+	return this->_durationSeconds;
 }
 
-void SetDuration(Song& song, int durationSeconds)
+Genre Song::GetGenre()
+{
+	return this->_genre;
+}
+
+void Song::SetTitle(string title)
+{
+	this->_title = title;
+}
+
+void Song::SetDurationSeconds(int durationSeconds)
 {
 	if (durationSeconds < 1)
 	{
 		throw exception("Продолжительность песни должна быть больше 0.");
 	}
-	song.DurationSeconds = durationSeconds;
+	this->_durationSeconds = durationSeconds;
 }
 
-void SetGenre(Song& song, Genre genre)
+void Song::SetGenre(Genre genre)
 {
-	song.Genre = genre;
+	this->_genre = genre;
+}
+
+Song::Song(string title, int durationSeconds, Genre genre)
+{
+	this->SetTitle(title);
+	this->SetDurationSeconds(durationSeconds);
+	this->SetGenre(genre);
+}
+
+Song::Song()
+{
+}
+
+Song::~Song()
+{
 }

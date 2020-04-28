@@ -6,40 +6,66 @@
 
 using namespace std;
 
-Album* MakeAlbum(string title, int releaseYear, Song* songs, int songsCount)
+string Album::GetTitle()
 {
-	Album* album = new Album();
-	SetTitle(*album, title);
-	SetReleaseYear(*album, releaseYear);
-	SetSongs(*album, songs);
-	SetSongsCount(*album, songsCount);
-	return album;
+	return this->_title;
 }
 
-void SetTitle(Album& album, string title)
+int Album::GetReleaseYear()
 {
-	album.Title = title;
+	return this->_releaseYear;
 }
 
-void SetReleaseYear(Album& album, int releaseYear)
+Song* Album::GetSongs()
+{
+	return this->_songs;
+}
+
+int Album::GetSongsCount()
+{
+	return this->_songsCount;
+}
+
+void Album::SetTitle(string title)
+{
+	this->_title = title;
+}
+
+void Album::SetReleaseYear(int releaseYear)
 {
 	if (releaseYear < 1)
 	{
 		throw exception("Год выпуска альбома должен быть положительным.");
 	}
-	album.ReleaseYear = releaseYear;
+	this->_releaseYear = releaseYear;
 }
 
-void SetSongs(Album& album, Song* songs)
+void Album::SetSongs(Song* songs)
 {
-	album.Songs = songs;
+	this->_songs = songs;
 }
 
-void SetSongsCount(Album& album, int songsCount)
+void Album::SetSongsCount(int songsCount)
 {
 	if (songsCount < 1)
 	{
 		throw exception("Количество песен в альбоме должно быть больше 0.");
 	}
-	album.SongsCount = songsCount;
+	this->_songsCount = songsCount;
+}
+
+Album::Album(string title, int releaseYear, Song* songs, int songsCount)
+{
+	this->SetTitle(title);
+	this->SetReleaseYear(releaseYear);
+	this->SetSongs(songs);
+	this->SetSongsCount(songsCount);
+}
+
+Album::Album()
+{
+}
+
+Album::~Album()
+{
 }

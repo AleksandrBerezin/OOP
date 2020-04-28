@@ -4,16 +4,26 @@
 
 using std::string;
 
-struct Album
+class Album
 {
-	string Title;
-	int ReleaseYear;
-	Song* Songs;
-	int SongsCount;
-};
+private:
+	string _title;
+	int _releaseYear;
+	Song* _songs;
+	int _songsCount;
 
-Album* MakeAlbum(string title, int releaseYear, Song* songs, int songsCount);
-void SetTitle(Album& album, string title);
-void SetReleaseYear(Album& album, int releaseYear);
-void SetSongs(Album& album, Song* songs);
-void SetSongsCount(Album& album, int songsCount);
+public:
+	string GetTitle();
+	int GetReleaseYear();
+	Song* GetSongs();
+	int GetSongsCount();
+
+	void SetTitle(string title);
+	void SetReleaseYear(int releaseYear);
+	void SetSongs(Song* songs);
+	void SetSongsCount(int songsCount);
+
+	Album(string title, int releaseYear, Song* songs, int songsCount);
+	Album();
+	~Album();
+};

@@ -4,22 +4,33 @@
 
 using std::string;
 
-struct Band
+class Band
 {
-	string Title;
-	string Description;
-	Album* Albums;
-	int AlbumsCount;
+private:
+	string _title;
+	string _description;
+	Album* _albums;
+	int _albumsCount;
+
+public:
+	string GetTitle();
+	string GetDescription();
+	Album* GetAlbums();
+	int GetAlbumsCount();
+
+	void SetTitle(string title);
+	void SetDescription(string description);
+	void SetAlbums(Album* albums);
+	void SetAlbumsCount(int albumsCount);
+
+	Band(string title, string description, Album* albums, int albumsCount);
+	Band();
+	~Band();
 
 	Song* FindSong(string songTitle);
 	Album* FindAlbum(Song* song);
+	Song* GetAllSongs(int& allSongsCount);
+	Song* GetAllGenreSongs(Genre findingGenre, int& allSongsCount);
 };
 
-Band* MakeBand(string title, string description, Album* albums, int albumsCount);
-void SetTitle(Band& band, string title);
-void SetDescription(Band& band, string description);
-void SetAlbums(Band& band, Album* albums);
-void SetAlbumsCount(Band& band, int albumsCount);
-Song* GetAllSongs(Band* band, int& allSongsCount);
-Song* GetAllGenreSongs(Band* band, Genre findingGenre, int& allSongsCount);
 void DemoBand();

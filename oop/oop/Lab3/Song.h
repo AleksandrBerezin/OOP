@@ -4,14 +4,23 @@
 
 using std::string;
 
-struct Song
+class Song
 {
-	string Title;
-	int DurationSeconds;
-	Genre Genre;
-};
+private:
+	string _title;
+	int _durationSeconds;
+	Genre _genre;
 
-Song* MakeSong(string title, int durationSeconds, Genre genre);
-void SetTitle(Song& song, string title);
-void SetDuration(Song& song, int durationSeconds);
-void SetGenre(Song& song, Genre genre);
+public:
+	string GetTitle();
+	int GetDurationSeconds();
+	Genre GetGenre();
+
+	void SetTitle(string title);
+	void SetDurationSeconds(int durationSeconds);
+	void SetGenre(Genre genre);
+
+	Song(string title, int durationSeconds, Genre genre);
+	Song();
+	~Song();
+};
