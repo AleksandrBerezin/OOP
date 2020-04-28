@@ -4,71 +4,85 @@
 
 using namespace std;
 
-Time* MakeTime(int year, int month, int day, int hour, int minute)
+int Time::GetYear()
 {
-	Time* time = new Time();
-	SetYear(*time, year);
-	SetMonth(*time, month);
-	SetDay(*time, day);
-	SetHour(*time, hour);
-	SetMinute(*time, minute);
-	return time;
+	return this->_year;
 }
 
-void SetYear(Time& time, int year)
+int Time::GetMonth()
+{
+	return this->_month;
+}
+
+int Time::GetDay()
+{
+	return this->_day;
+}
+
+int Time::GetHour()
+{
+	return this->_hour;
+}
+
+int Time::GetMinute()
+{
+	return this->_minute;
+}
+
+void Time::SetYear(int year)
 {
 	if (year < 1)
 	{
 		throw exception("Год должен быть положительным.");
 	}
-	time.Year = year;
+	this->_year = year;
 }
 
-void SetMonth(Time& time, int month)
+void Time::SetMonth(int month)
 {
 	if (month < 1 || month > 12)
 	{
 		throw exception("Месяц должен быть в диапазоне 1-12.");
 	}
-	time.Month = month;
+	this->_month = month;
 }
 
-void SetDay(Time& time, int day)
+void Time::SetDay(int day)
 {
 	if (day < 1 || day > 30)
 	{
 		throw exception("День должен быть в диапазоне 1-30.");
 	}
-	time.Day = day;
+	this->_day = day;
 }
 
-void SetHour(Time& time, int hour)
+void Time::SetHour(int hour)
 {
 	if (hour < 1 || hour > 24)
 	{
 		throw exception("Час должен быть в диапазоне 1-24.");
 	}
-	time.Hour = hour;
+	this->_hour = hour;
 }
 
-void SetMinute(Time& time, int minute)
+void Time::SetMinute(int minute)
 {
 	if (minute < 1 || minute > 60)
 	{
 		throw exception("Минуты должны быть в диапазоне 1-60.");
 	}
-	time.Minute = minute;
+	this->_minute = minute;
 }
 
-// Если число состоит из 1 цифры, то добавляется 0 перед числом
-string GetDecimalStartingWithZero(int number)
+Time::Time(int year, int month, int day, int hour, int minute)
 {
-	if (number / 10 > 0)
-	{
-		return to_string(number);;
-	}
-	else
-	{
-		return "0" + to_string(number);;
-	}
+	this->SetYear(year);
+	this->SetMonth(month);
+	this->SetDay(day);
+	this->SetHour(hour);
+	this->SetMinute(minute);
+}
+
+Time::~Time()
+{
 }

@@ -3,122 +3,156 @@
 #include <string>
 #include "Flight.h"
 #include "Time.h"
+#include "../Common/CommonLibrary.h"
 
 using namespace std;
 
-Flight* MakeFlight(string number, string departurePoint, string destinationPoint,
-	Time* departureTime, Time* destinationTime)
+string Flight::GetNumber()
 {
-	Flight* flight = new Flight();
-	SetNumber(*flight, number);
-	SetDeparturePoint(*flight, departurePoint);
-	SetDestinationPoint(*flight, destinationPoint);
-	SetDepartureTime(*flight, departureTime);
-	SetArrivalTime(*flight, destinationTime);
-	return flight;
+	return this->_number;
 }
 
-void SetNumber(Flight& flight, string number)
+string Flight::GetDeparturePoint()
 {
-	flight.Number = number;
+	return this->_departurePoint;
 }
 
-void SetDeparturePoint(Flight& flight, string departurePoint)
+string Flight::GetDestinationPoint()
 {
-	flight.DeparturePoint = departurePoint;
+	return this->_destinationPoint;
 }
 
-void SetDestinationPoint(Flight& flight, string destinationPoint)
+Time* Flight::GetDepartureTime()
 {
-	flight.DestinationPoint = destinationPoint;
+	return this->_departureTime;
 }
 
-void SetDepartureTime(Flight& flight, Time* departureTime)
+Time* Flight::GetArrivalTime()
 {
-	flight.DepartureTime = departureTime;
+	return this->_arrivalTime;
 }
 
-void SetArrivalTime(Flight& flight, Time* arrivalTime)
+void Flight::SetNumber(string number)
 {
-	if (flight.DepartureTime->Year <= arrivalTime->Year &&
-		flight.DepartureTime->Month <= arrivalTime->Month &&
-		flight.DepartureTime->Day <= arrivalTime->Day &&
-		flight.DepartureTime->Hour <= arrivalTime->Hour &&
-		flight.DepartureTime->Minute <= arrivalTime->Minute)
+	this->_number = number;
+}
+
+void Flight::SetDeparturePoint(string departurePoint)
+{
+	this->_departurePoint = departurePoint;
+}
+
+void Flight::SetDestinationPoint(string destinationPoint)
+{
+	this->_destinationPoint = destinationPoint;
+}
+
+void Flight::SetDepartureTime(Time* departureTime)
+{
+	this->_departureTime = departureTime;
+}
+
+void Flight::SetArrivalTime(Time* arrivalTime)
+{
+	if (this->GetDepartureTime()->GetYear() <= arrivalTime->GetYear() &&
+		this->GetDepartureTime()->GetMonth() <= arrivalTime->GetMonth() &&
+		this->GetDepartureTime()->GetDay() <= arrivalTime->GetDay() &&
+		this->GetDepartureTime()->GetHour() <= arrivalTime->GetHour() &&
+		this->GetDepartureTime()->GetMinute() <= arrivalTime->GetMinute())
 	{
-		flight.ArrivalTime = arrivalTime;
+		this->_arrivalTime = arrivalTime;
 		return;
 	}
 
-	if (flight.DepartureTime->Year <= arrivalTime->Year &&
-		flight.DepartureTime->Month <= arrivalTime->Month &&
-		flight.DepartureTime->Day <= arrivalTime->Day &&
-		flight.DepartureTime->Hour < arrivalTime->Hour &&
-		flight.DepartureTime->Minute > arrivalTime->Minute)
+	if (this->GetDepartureTime()->GetYear() <= arrivalTime->GetYear() &&
+		this->GetDepartureTime()->GetMonth() <= arrivalTime->GetMonth() &&
+		this->GetDepartureTime()->GetDay() <= arrivalTime->GetDay() &&
+		this->GetDepartureTime()->GetHour() < arrivalTime->GetHour() &&
+		this->GetDepartureTime()->GetMinute() > arrivalTime->GetMinute())
 	{
-		flight.ArrivalTime = arrivalTime;
-		return;
-	}
-	
-	if (flight.DepartureTime->Year <= arrivalTime->Year &&
-		flight.DepartureTime->Month <= arrivalTime->Month &&
-		flight.DepartureTime->Day < arrivalTime->Day &&
-		flight.DepartureTime->Hour > arrivalTime->Hour)
-	{
-		flight.ArrivalTime = arrivalTime;
+		this->_arrivalTime = arrivalTime;
 		return;
 	}
 
-	if (flight.DepartureTime->Year <= arrivalTime->Year &&
-		flight.DepartureTime->Month < arrivalTime->Month &&
-		flight.DepartureTime->Day > arrivalTime->Day)
+	if (this->GetDepartureTime()->GetYear() <= arrivalTime->GetYear() &&
+		this->GetDepartureTime()->GetMonth() <= arrivalTime->GetMonth() &&
+		this->GetDepartureTime()->GetDay() < arrivalTime->GetDay() &&
+		this->GetDepartureTime()->GetHour() > arrivalTime->GetHour())
 	{
-		flight.ArrivalTime = arrivalTime;
+		this->_arrivalTime = arrivalTime;
 		return;
 	}
 
-	if (flight.DepartureTime->Year < arrivalTime->Year &&
-		flight.DepartureTime->Month > arrivalTime->Month)
+	if (this->GetDepartureTime()->GetYear() <= arrivalTime->GetYear() &&
+		this->GetDepartureTime()->GetMonth() < arrivalTime->GetMonth() &&
+		this->GetDepartureTime()->GetDay() > arrivalTime->GetDay())
 	{
-		flight.ArrivalTime = arrivalTime;
+		this->_arrivalTime = arrivalTime;
+		return;
+	}
+
+	if (this->GetDepartureTime()->GetYear() < arrivalTime->GetYear() &&
+		this->GetDepartureTime()->GetMonth() > arrivalTime->GetMonth())
+	{
+		this->_arrivalTime = arrivalTime;
 		return;
 	}
 
 	throw exception("Время прибытия не может быть раньше времени отправления.");
 }
 
+Flight::Flight(string number, string departurePoint, string destinationPoint,
+	Time* departureTime, Time* arrivalTime)
+{
+	this->SetNumber(number);
+	this->SetDeparturePoint(departurePoint);
+	this->SetDestinationPoint(destinationPoint);
+	this->SetDepartureTime(departureTime);
+	this->SetArrivalTime(arrivalTime);
+}
+
+Flight::~Flight()
+{
+}
+
+int Flight::GetFlightTimeMinutes()
+{
+	return (((this->GetArrivalTime()->GetHour() - this->GetDepartureTime()->GetHour()) * 60)
+		+ (this->GetArrivalTime()->GetMinute() - this->GetDepartureTime()->GetMinute()));
+}
+
 void DemoFlightWithTime()
 {
 	const int flightsCount = 5;
 
-	Flight flights[5];
-	flights[0] = *MakeFlight("S015", "Томск", "Москва", MakeTime(20, 04, 26, 12, 20),
-		MakeTime(20, 04, 26, 16, 15));
-	flights[1] = *MakeFlight("S021", "Томск", "Новосибирск", MakeTime(20, 03, 22, 10, 10),
-		MakeTime(20, 03, 22, 11, 10));
-	flights[2] = *MakeFlight("S034", "Томск", "Екатеринбург", MakeTime(20, 04, 23, 12, 20),
-		MakeTime(20, 04, 23, 14, 50));
-	flights[3] = *MakeFlight("S032", "Томск", "Сургут", MakeTime(20, 03, 23, 11, 15),
-		MakeTime(20, 03, 23, 12, 45));
-	flights[4] = *MakeFlight("S032", "Томск", "Стрежевой", MakeTime(20, 03, 27, 11, 20),
-		MakeTime(20, 03, 27, 12, 5));
+	Flight* flights[flightsCount];
+	flights[0] = new Flight("S015", "Томск", "Москва", new Time(20, 04, 26, 12, 20),
+		new Time(20, 04, 26, 16, 15));
+	flights[1] = new Flight("S021", "Томск", "Новосибирск", new Time(20, 03, 22, 10, 10),
+		new Time(20, 03, 22, 11, 10));
+	flights[2] = new Flight("S034", "Томск", "Екатеринбург", new Time(20, 04, 23, 12, 20),
+		new Time(20, 04, 23, 14, 50));
+	flights[3] = new Flight("S032", "Томск", "Сургут", new Time(20, 03, 23, 11, 15),
+		new Time(20, 03, 23, 12, 45));
+	flights[4] = new Flight("S032", "Томск", "Стрежевой", new Time(20, 03, 27, 11, 20),
+		new Time(20, 03, 27, 12, 5));
 
 	cout << endl;
 
 	for (int i = 0; i < flightsCount; i++)
 	{
-		cout << flights[i].Number << " " << flights[i].DeparturePoint << "-"
-			<< flights[i].DestinationPoint << ". Вылет "
-			<< GetDecimalStartingWithZero(flights[i].DepartureTime->Day)
-			<< "." << GetDecimalStartingWithZero(flights[i].DepartureTime->Month)
-			<< "." << GetDecimalStartingWithZero(flights[i].DepartureTime->Year)
-			<< " " << GetDecimalStartingWithZero(flights[i].DepartureTime->Hour)
-			<< ":" << GetDecimalStartingWithZero(flights[i].DepartureTime->Minute)
-			<< ". Прибытие " << GetDecimalStartingWithZero(flights[i].ArrivalTime->Day)
-			<< "." << GetDecimalStartingWithZero(flights[i].ArrivalTime->Month)
-			<< "." << GetDecimalStartingWithZero(flights[i].ArrivalTime->Year)
-			<< " " << GetDecimalStartingWithZero(flights[i].ArrivalTime->Hour)
-			<< ":" << GetDecimalStartingWithZero(flights[i].ArrivalTime->Minute)
+		cout << flights[i]->GetNumber() << " " << flights[i]->GetDeparturePoint() << "-"
+			<< flights[i]->GetDestinationPoint() << ". Вылет "
+			<< GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetDay())
+			<< "." << GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetMonth())
+			<< "." << GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetYear())
+			<< " " << GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetHour())
+			<< ":" << GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetMinute())
+			<< ". Прибытие " << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetDay())
+			<< "." << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetMonth())
+			<< "." << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetYear())
+			<< " " << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetHour())
+			<< ":" << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetMinute())
 			<< "." << endl;
 	}
 
@@ -126,15 +160,9 @@ void DemoFlightWithTime()
 
 	for (int i = 0; i < flightsCount; i++)
 	{
-		int flightTime = GetFlightTimeMinutes(flights[i]);
-		cout << flights[i].Number << " " << flights[i].DeparturePoint << "-"
-			<< flights[i].DestinationPoint << ". Время полета: "
+		int flightTime = flights[i]->GetFlightTimeMinutes();
+		cout << flights[i]->GetNumber() << " " << flights[i]->GetDeparturePoint() << "-"
+			<< flights[i]->GetDestinationPoint() << ". Время полета: "
 			<< flightTime / 60 << "ч. " << flightTime % 60 << "мин." << endl;
 	}
-}
-
-int GetFlightTimeMinutes(Flight& flight)
-{
-	return (((flight.ArrivalTime->Hour - flight.DepartureTime->Hour) * 60) +
-		(flight.ArrivalTime->Minute - flight.DepartureTime->Minute));
 }

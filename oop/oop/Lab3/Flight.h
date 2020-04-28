@@ -4,21 +4,33 @@
 
 using std::string;
 
-struct Flight
+class Flight
 {
-	string Number;
-	string DeparturePoint;
-	string DestinationPoint;
-	Time* DepartureTime;
-	Time* ArrivalTime;
+private:
+	string _number;
+	string _departurePoint;
+	string _destinationPoint;
+	Time* _departureTime;
+	Time* _arrivalTime;
+
+public:
+	string GetNumber();
+	string GetDeparturePoint();
+	string GetDestinationPoint();
+	Time* GetDepartureTime();
+	Time* GetArrivalTime();
+
+	void SetNumber(string number);
+	void SetDeparturePoint(string departurePoint);
+	void SetDestinationPoint(string destinationPoint);
+	void SetDepartureTime(Time* departureTime);
+	void SetArrivalTime(Time* arrivalTime);
+
+	Flight(string number, string departurePoint, string destinationPoint,
+		Time* departureTime, Time* arrivalTime);
+	~Flight();
+
+	int GetFlightTimeMinutes();
 };
 
-Flight* MakeFlight(string number, string departurePoint, string destinationPoint,
-	Time* departureTime, Time* arrivalTime);
-void SetNumber(Flight& flight, string number);
-void SetDeparturePoint(Flight& flight, string departurePoint);
-void SetDestinationPoint(Flight& flight, string destinationPoint);
-void SetDepartureTime(Flight& flight, Time* departureTime);
-void SetArrivalTime(Flight& flight, Time* arrivalTime);
 void DemoFlightWithTime();
-int GetFlightTimeMinutes(Flight& flight);

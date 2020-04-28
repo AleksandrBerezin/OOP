@@ -3,19 +3,28 @@
 
 using std::string;
 
-struct Time
+class Time
 {
-	int Year;
-	int Month;
-	int Day;
-	int Hour;
-	int Minute;
-};
+private:
+	int _year;
+	int _month;
+	int _day;
+	int _hour;
+	int _minute;
 
-Time* MakeTime(int year, int month, int day, int hour, int minute);
-void SetYear(Time& time, int year);
-void SetMonth(Time& time, int month);
-void SetDay(Time& time, int day);
-void SetHour(Time& time, int hour);
-void SetMinute(Time& time, int minute);
-string GetDecimalStartingWithZero(int numder);
+public:
+	int GetYear();
+	int GetMonth();
+	int GetDay();
+	int GetHour();
+	int GetMinute();
+
+	void SetYear(int year);
+	void SetMonth(int month);
+	void SetDay(int day);
+	void SetHour(int hour);
+	void SetMinute(int minute);
+
+	Time(int year, int month, int day, int hour, int minute);
+	~Time();
+};
