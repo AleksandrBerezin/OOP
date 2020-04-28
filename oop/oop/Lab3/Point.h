@@ -1,11 +1,18 @@
 ﻿#pragma once
 
-struct Point
+class Point
 {
-	double X;
-	double Y;
-};
+private:
+	double _x;
+	double _y;
 
-Point* MakePoint(double x, double y);
-void SetX(Point& point, double x);
-void SetY(Point& point, double y);
+public:
+	double GetX();
+	double GetY();
+
+	void SetX(double x);
+	void SetY(double y);
+
+	Point(double x, double y);
+	~Point();
+};

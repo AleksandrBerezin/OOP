@@ -3,20 +3,32 @@
 
 using namespace std;
 
-Point* MakePoint(double x, double y)
+double Point::GetX()
 {
-	Point* point = new Point();
-	SetX(*point, x);
-	SetY(*point, y);
-	return point;
+	return this->_x;
 }
 
-void SetX(Point& point, double x)
+double Point::GetY()
 {
-	point.X = x;
+	return this->_y;
 }
 
-void SetY(Point& point, double y)
+void Point::SetX(double x)
 {
-	point.Y = y;
+	this->_x = x;
+}
+
+void Point::SetY(double y)
+{
+	this->_y = y;
+}
+
+Point::Point(double x, double y)
+{
+	this->SetX(x);
+	this->SetY(y);
+}
+
+Point::~Point()
+{
 }
