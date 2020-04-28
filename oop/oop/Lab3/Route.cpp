@@ -64,7 +64,7 @@ void ReadRouteFromConsole(Route& route)
 		cout << "Введите среднюю продолжительность маршрута в минутах: ";
 		cin >> averageDuration;
 	}
-	route.AverageDurationInMinutes = averageDuration;
+	route.AverageDurationMinutes = averageDuration;
 
 	int frequency;
 	cout << "Введите частоту следования маршрута в минутах: ";
@@ -77,7 +77,7 @@ void ReadRouteFromConsole(Route& route)
 		cout << "Введите частоту следования маршрута в минутах: ";
 		cin >> frequency;
 	}
-	route.FrequencyInMinutes = frequency;
+	route.FrequencyMinutes = frequency;
 
 	int stationsCount;
 	cout << "Введите количество остановок: ";
@@ -119,8 +119,8 @@ void WriteRouteToConsole(Route& route)
 		cout << " ";
 	}
 
-	cout << "Маршрут имеет продолжительность " << route.AverageDurationInMinutes
-		<< " мин., с частотой следования " << route.FrequencyInMinutes
+	cout << "Маршрут имеет продолжительность " << route.AverageDurationMinutes
+		<< " мин., с частотой следования " << route.FrequencyMinutes
 		<< " мин." << endl;
 }
 

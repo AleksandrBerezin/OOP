@@ -32,3 +32,16 @@ void PrintNumberOfTask(string number)
 	cout << "|Task " << number << "|" << endl;
 	cout << "------------" << endl;
 }
+
+// Если число состоит из 1 цифры, то добавляется 0 перед числом
+string GetDecimalStartingWithZero(int number)
+{
+	if (number / 10 > 0)
+	{
+		return to_string(number);;
+	}
+	else
+	{
+		return "0" + to_string(number);;
+	}
+}

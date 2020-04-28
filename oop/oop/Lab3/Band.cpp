@@ -214,7 +214,6 @@ void DemoBand()
 	// Поиск песни
 	string findingSong;
 	cout << endl << "Введите название песни, которую нужно найти (например Song1): ";
-	cin.ignore();
 	getline(cin, findingSong);
 
 	Song* findedSong = band->FindSong(findingSong);

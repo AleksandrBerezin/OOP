@@ -34,3 +34,5 @@ public:
 };
 
 void DemoFlightWithTime();
+void PrintFlight(Flight& flight);
+void PrintFlightTime(Flight& flight);

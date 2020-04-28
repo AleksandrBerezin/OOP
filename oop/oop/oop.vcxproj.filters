@@ -52,6 +52,12 @@
     <Filter Include="Source Files\Lab2\Structures">
       <UniqueIdentifier>{ad9f8eb2-9002-46aa-a3bc-10b3067fe239}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Lab3">
+      <UniqueIdentifier>{4a68e939-bdc1-4cbd-87de-85b5d1160532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lab3">
+      <UniqueIdentifier>{2c70ddef-c709-4c31-b80d-f030547bbacf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab1\Menus\MenuAddressesAndPointers.cpp">
@@ -147,22 +153,13 @@
     <ClCompile Include="Lab1\Tasks\Task_1_5_8.cpp">
       <Filter>Source Files\Lab1\Tasks</Filter>
     </ClCompile>
-    <ClCompile Include="Lab2\Enums\Genre.cpp">
-      <Filter>Source Files\Lab2\Enums</Filter>
-    </ClCompile>
     <ClCompile Include="Lab2\Structures\Circle.cpp">
       <Filter>Source Files\Lab2\Structures</Filter>
     </ClCompile>
     <ClCompile Include="Lab2\Enums\Color.cpp">
       <Filter>Source Files\Lab2\Enums</Filter>
     </ClCompile>
-    <ClCompile Include="Lab2\Structures\Flight.cpp">
-      <Filter>Source Files\Lab2\Structures</Filter>
-    </ClCompile>
     <ClCompile Include="Lab2\Structures\Movie.cpp">
-      <Filter>Source Files\Lab2\Structures</Filter>
-    </ClCompile>
-    <ClCompile Include="Lab2\Structures\Rectangle.cpp">
       <Filter>Source Files\Lab2\Structures</Filter>
     </ClCompile>
     <ClCompile Include="Lab2\Enums\Season.cpp">
@@ -174,11 +171,53 @@
     <ClCompile Include="Lab2\Enums\StudentLearningForm.cpp">
       <Filter>Source Files\Lab2\Enums</Filter>
     </ClCompile>
-    <ClCompile Include="Lab2\Structures\Time.cpp">
-      <Filter>Source Files\Lab2\Structures</Filter>
-    </ClCompile>
     <ClCompile Include="Lab2\Enums\WeekDay.cpp">
       <Filter>Source Files\Lab2\Enums</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Book.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\MenuLab3.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Route.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Point.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Structures\RectangleLab2.cpp">
+      <Filter>Source Files\Lab2\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Structures\TimeLab2.cpp">
+      <Filter>Source Files\Lab2\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Structures\FlightLab2.cpp">
+      <Filter>Source Files\Lab2\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Enums\MovieGenre.cpp">
+      <Filter>Source Files\Lab2\Enums</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Flight.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Rectangle.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Time.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Album.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Song.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Band.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Genre.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -193,9 +232,6 @@
     </ClInclude>
     <ClInclude Include="Lab1\Tasks\TasksLab1.h">
       <Filter>Header Files\Lab1\Tasks</Filter>
-    </ClInclude>
-    <ClInclude Include="Lab2\Enums\Genre.h">
-      <Filter>Header Files\Lab2\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Lab2\Enums\Season.h">
       <Filter>Header Files\Lab2\Enums</Filter>
@@ -212,16 +248,10 @@
     <ClInclude Include="Lab2\Enums\Color.h">
       <Filter>Header Files\Lab2\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="Lab2\Structures\Rectangle.h">
-      <Filter>Header Files\Lab2\Structures</Filter>
-    </ClInclude>
     <ClInclude Include="Lab2\Structures\Circle.h">
       <Filter>Header Files\Lab2\Structures</Filter>
     </ClInclude>
     <ClInclude Include="Lab2\Structures\Contact.h">
-      <Filter>Header Files\Lab2\Structures</Filter>
-    </ClInclude>
-    <ClInclude Include="Lab2\Structures\Flight.h">
       <Filter>Header Files\Lab2\Structures</Filter>
     </ClInclude>
     <ClInclude Include="Lab2\Structures\Movie.h">
@@ -233,8 +263,47 @@
     <ClInclude Include="Lab2\Structures\Subject.h">
       <Filter>Header Files\Lab2\Structures</Filter>
     </ClInclude>
-    <ClInclude Include="Lab2\Structures\Time.h">
+    <ClInclude Include="Lab3\Book.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Route.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Structures\RectangleLab2.h">
       <Filter>Header Files\Lab2\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Structures\TimeLab2.h">
+      <Filter>Header Files\Lab2\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Structures\FlightLab2.h">
+      <Filter>Header Files\Lab2\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Enums\MovieGenre.h">
+      <Filter>Header Files\Lab2\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Flight.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Rectangle.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Time.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Point.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Genre.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Song.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Album.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Band.h">
+      <Filter>Header Files\Lab3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,14 +1,13 @@
 ﻿#pragma once
 #include <string>
 
-using namespace std;
 using std::string;
 
 struct Route
 {
 	int Number;
-	int AverageDurationInMinutes;
-	int FrequencyInMinutes;
+	int AverageDurationMinutes;
+	int FrequencyMinutes;
 	string Stations[10];
 	int StationsCount;
 };

@@ -141,19 +141,12 @@ void DemoFlightWithTime()
 
 	for (int i = 0; i < flightsCount; i++)
 	{
-		cout << flights[i]->GetNumber() << " " << flights[i]->GetDeparturePoint() << "-"
-			<< flights[i]->GetDestinationPoint() << ". Вылет "
-			<< GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetDay())
-			<< "." << GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetMonth())
-			<< "." << GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetYear())
-			<< " " << GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetHour())
-			<< ":" << GetDecimalStartingWithZero(flights[i]->GetDepartureTime()->GetMinute())
-			<< ". Прибытие " << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetDay())
-			<< "." << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetMonth())
-			<< "." << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetYear())
-			<< " " << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetHour())
-			<< ":" << GetDecimalStartingWithZero(flights[i]->GetArrivalTime()->GetMinute())
-			<< "." << endl;
+		PrintFlight(*flights[i]);
+		cout << ". Вылет ";
+		PrintFlightTime(*flights[i]);
+		cout << ". Прибытие ";
+		PrintFlightTime(*flights[i]);
+		cout << "." << endl;
 	}
 
 	cout << endl;
@@ -161,8 +154,23 @@ void DemoFlightWithTime()
 	for (int i = 0; i < flightsCount; i++)
 	{
 		int flightTime = flights[i]->GetFlightTimeMinutes();
-		cout << flights[i]->GetNumber() << " " << flights[i]->GetDeparturePoint() << "-"
-			<< flights[i]->GetDestinationPoint() << ". Время полета: "
-			<< flightTime / 60 << "ч. " << flightTime % 60 << "мин." << endl;
+		PrintFlight(*flights[i]);
+		cout << ". Время полета: " << flightTime / 60 << "ч. " << flightTime % 60
+			<< "мин." << endl;
 	}
+}
+
+void PrintFlight(Flight& flight)
+{
+	cout << flight.GetNumber() << " " << flight.GetDeparturePoint() << "-"
+		<< flight.GetDestinationPoint();
+}
+
+void PrintFlightTime(Flight& flight)
+{
+	cout << GetDecimalStartingWithZero(flight.GetDepartureTime()->GetDay())
+		<< "." << GetDecimalStartingWithZero(flight.GetDepartureTime()->GetMonth())
+		<< "." << GetDecimalStartingWithZero(flight.GetDepartureTime()->GetYear())
+		<< " " << GetDecimalStartingWithZero(flight.GetDepartureTime()->GetHour())
+		<< ":" << GetDecimalStartingWithZero(flight.GetDepartureTime()->GetMinute());
 }
