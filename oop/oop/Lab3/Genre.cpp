@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// TODO: почему не в папке?
 void WriteGenre(Genre genre)
 {
 	switch (genre)
