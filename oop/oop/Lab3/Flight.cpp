@@ -113,6 +113,8 @@ Flight::Flight(string number, string departurePoint, string destinationPoint,
 
 Flight::~Flight()
 {
+	delete _departureTime;
+	delete _arrivalTime;
 }
 
 int Flight::GetFlightTimeMinutes()
@@ -126,16 +128,16 @@ void DemoFlightWithTime()
 	const int flightsCount = 5;
 
 	Flight* flights[flightsCount];
-	//TODO: ох, не стоит 2020-ый год обрезать до 20-го. Столько потенциальных ошибок...
-	flights[0] = new Flight("S015", "Томск", "Москва", new Time(20, 04, 26, 12, 20),
+	//TODO: ох, не стоит 2020-ый год обрезать до 20-го. Столько потенциальных ошибок... (Done)
+	flights[0] = new Flight("S015", "Томск", "Москва", new Time(2020, 04, 26, 12, 20),
 		new Time(20, 04, 26, 16, 15));
-	flights[1] = new Flight("S021", "Томск", "Новосибирск", new Time(20, 03, 22, 10, 10),
+	flights[1] = new Flight("S021", "Томск", "Новосибирск", new Time(2020, 03, 22, 10, 10),
 		new Time(20, 03, 22, 11, 10));
-	flights[2] = new Flight("S034", "Томск", "Екатеринбург", new Time(20, 04, 23, 12, 20),
+	flights[2] = new Flight("S034", "Томск", "Екатеринбург", new Time(2020, 04, 23, 12, 20),
 		new Time(20, 04, 23, 14, 50));
-	flights[3] = new Flight("S032", "Томск", "Сургут", new Time(20, 03, 23, 11, 15),
+	flights[3] = new Flight("S032", "Томск", "Сургут", new Time(2020, 03, 23, 11, 15),
 		new Time(20, 03, 23, 12, 45));
-	flights[4] = new Flight("S032", "Томск", "Стрежевой", new Time(20, 03, 27, 11, 20),
+	flights[4] = new Flight("S032", "Томск", "Стрежевой", new Time(2020, 03, 27, 11, 20),
 		new Time(20, 03, 27, 12, 5));
 
 	cout << endl;

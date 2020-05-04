@@ -68,4 +68,5 @@ Album::Album()
 
 Album::~Album()
 {
+	delete[] _songs;
 }

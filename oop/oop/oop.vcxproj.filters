@@ -217,7 +217,7 @@
       <Filter>Source Files\Lab3</Filter>
     </ClCompile>
     <ClCompile Include="Lab3\Genre.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Lab3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

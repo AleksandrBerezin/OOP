@@ -52,6 +52,7 @@ Rectangle::Rectangle(double length, double width, Point* center)
 
 Rectangle::~Rectangle()
 {
+	delete[] _center;
 }
 
 void DemoRectangleWithPoint()
@@ -90,5 +91,5 @@ void DemoRectangleWithPoint()
 
 	cout << endl << "Cреднее значение всех центров прямоугольников: Xcenter = "
 		<< averageX << "; Ycenter = " << averageY << endl;
-	// TODO: утечка памяти
+	// TODO: утечка памяти (Реализовано в деструкторе)
 }

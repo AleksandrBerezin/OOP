@@ -61,6 +61,7 @@ Band::Band()
 
 Band::~Band()
 {
+	delete[] _albums;
 }
 
 Song* Band::FindSong(string songTitle)
@@ -107,13 +108,14 @@ Song* Band::GetAllSongs(int& allSongsCount)
 
 	Song* allSongs = new Song[songsCount]();
 	allSongsCount = songsCount;
+	int k = 0;
 
 	for (int i = 0; i < this->GetAlbumsCount(); i++)
 	{
 		for (int j = 0; j < this->GetAlbums()[i].GetSongsCount(); j++)
 		{
-			allSongs[allSongsCount - songsCount] = this->GetAlbums()[i].GetSongs()[j];
-			songsCount--;
+			allSongs[k] = this->GetAlbums()[i].GetSongs()[j];
+			k++;
 		}
 	}
 
@@ -137,6 +139,7 @@ Song* Band::GetAllGenreSongs(Genre findingGenre, int& allSongsCount)
 
 	Song* allSongs = new Song[songsCount]();
 	allSongsCount = songsCount;
+	int k = 0;
 
 	for (int i = 0; i < this->GetAlbumsCount(); i++)
 	{
@@ -144,10 +147,10 @@ Song* Band::GetAllGenreSongs(Genre findingGenre, int& allSongsCount)
 		{
 			if (this->GetAlbums()[i].GetSongs()[j].GetGenre() == findingGenre)
 			{
-				// TODO: идеи с вычитанием индексов всегда тяжело читаются. 
+				// TODO: идеи с вычитанием индексов всегда тяжело читаются. (Done)
 				// Проще создать счетчик k = 0 и увеличивать на 1
-				allSongs[allSongsCount - songsCount] = this->GetAlbums()[i].GetSongs()[j];
-				songsCount--;
+				allSongs[k] = this->GetAlbums()[i].GetSongs()[j];
+				k++;
 			}
 		}
 	}
@@ -257,4 +260,5 @@ void DemoBand()
 	WriteGenre(findingGenre);
 	cout << "." << endl;
 	// TODO: утечка памяти? Должно решаться либо здесь, либо через деструкторы
+	//(Реализовано в деструкторе)
 }
