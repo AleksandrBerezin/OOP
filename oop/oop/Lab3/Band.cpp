@@ -147,8 +147,6 @@ Song* Band::GetAllGenreSongs(Genre findingGenre, int& allSongsCount)
 		{
 			if (this->GetAlbums()[i].GetSongs()[j].GetGenre() == findingGenre)
 			{
-				// TODO: идеи с вычитанием индексов всегда тяжело читаются. (Done)
-				// Проще создать счетчик k = 0 и увеличивать на 1
 				allSongs[k] = this->GetAlbums()[i].GetSongs()[j];
 				k++;
 			}
@@ -259,6 +257,4 @@ void DemoBand()
 		<< " песен в жанре ";
 	WriteGenre(findingGenre);
 	cout << "." << endl;
-	// TODO: утечка памяти? Должно решаться либо здесь, либо через деструкторы
-	//(Реализовано в деструкторе)
 }

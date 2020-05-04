@@ -150,7 +150,7 @@ void DemoRectangle_2_5_4()
 }
 
 RectangleLab2* FindRectangle(RectangleLab2* rectangles, int count)
-{// TODO: переделай, чтобы функция возвращала указатель на найденный прямоугольник, а вывод на экран производился в DemoRectangle() (Done)
+{
 	int maxLength = 0;
 	int index = 0;
 
@@ -198,7 +198,6 @@ void DemoRectangle_2_5_5()
 
 RectangleLab2* FindMaxRectangle(RectangleLab2* rectangles, int count)
 {
-	// TODO: также сделать через возвращение указателя на найденный объект (Done)
 	int maxSquare = 0;
 	int index = 0;
 

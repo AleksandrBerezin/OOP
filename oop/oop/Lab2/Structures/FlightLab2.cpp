@@ -94,7 +94,6 @@ void DemoDynamicFlight_2_6_1()
 
 FlightLab2* FindShortestFlight(FlightLab2* flights, int count)
 {
-	// TODO: сделать через возврат указателя (Done)
 	int minTime = flights[0].FlightTimeInMinutes;
 	int index = 0;
 

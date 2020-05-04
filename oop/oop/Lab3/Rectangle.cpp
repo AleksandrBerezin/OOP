@@ -91,5 +91,4 @@ void DemoRectangleWithPoint()
 
 	cout << endl << "Cреднее значение всех центров прямоугольников: Xcenter = "
 		<< averageX << "; Ycenter = " << averageY << endl;
-	// TODO: утечка памяти (Реализовано в деструкторе)
 }

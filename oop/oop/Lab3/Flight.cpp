@@ -128,7 +128,6 @@ void DemoFlightWithTime()
 	const int flightsCount = 5;
 
 	Flight* flights[flightsCount];
-	//TODO: ох, не стоит 2020-ый год обрезать до 20-го. Столько потенциальных ошибок... (Done)
 	flights[0] = new Flight("S015", "Томск", "Москва", new Time(2020, 04, 26, 12, 20),
 		new Time(20, 04, 26, 16, 15));
 	flights[1] = new Flight("S021", "Томск", "Новосибирск", new Time(2020, 03, 22, 10, 10),

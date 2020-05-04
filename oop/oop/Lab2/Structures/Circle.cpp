@@ -17,7 +17,6 @@ Circle* MakeCircle(double x, double y, double radius, string color)
 
 Circle* CopyCircle(Circle& circle)
 {
-	// TODO: сделать через вызов функции-конструктора (Done)
 	Circle* copiedCircle = new Circle();
 	copiedCircle = MakeCircle(circle.X, circle.Y, circle.Radius, circle.Color);
 
@@ -33,7 +32,7 @@ void DemoCircle()
 	Circle* copiedCircle1 = CopyCircle(*circle1);
 	Circle* copiedCircle2 = CopyCircle(*circle2);
 	Circle* copiedCircle3 = CopyCircle(*circle3);
-	// TODO: утечка памяти, поправить (Done)
+	
 	delete circle1;
 	delete circle2;
 	delete circle3;

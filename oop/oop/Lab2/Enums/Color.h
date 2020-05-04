@@ -10,7 +10,7 @@ enum Color
 	DarkBlue,
 	Violet
 };
-// TODO: функции по работе с перечислением должны быть в одном файле с перечислением (Done)
+
 void WriteColor(Color color);
 Color ReadColor();
 int CountColor(Color* colors, int count, Color findedColor);

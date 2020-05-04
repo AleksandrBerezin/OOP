@@ -9,7 +9,7 @@ struct RectangleLab2
 	double Width;
 	string Color;
 };
-// TODO: в один файл со структурой (Done)
+
 void ReadRectangle(RectangleLab2& rectangle);
 void WriteRectangle(RectangleLab2& rectangle);
 void Exchange(RectangleLab2& rectangle1, RectangleLab2& rectangle2);
