@@ -40,17 +40,13 @@ void Album::SetReleaseYear(int releaseYear)
 	this->_releaseYear = releaseYear;
 }
 
-void Album::SetSongs(Song* songs)
-{
-	this->_songs = songs;
-}
-
-void Album::SetSongsCount(int songsCount)
+void Album::SetSongs(Song* songs, int songsCount)
 {
 	if (songsCount < 1)
 	{
 		throw exception("Количество песен в альбоме должно быть больше 0.");
 	}
+	this->_songs = songs;
 	this->_songsCount = songsCount;
 }
 
@@ -58,8 +54,7 @@ Album::Album(string title, int releaseYear, Song* songs, int songsCount)
 {
 	this->SetTitle(title);
 	this->SetReleaseYear(releaseYear);
-	this->SetSongs(songs);
-	this->SetSongsCount(songsCount);
+	this->SetSongs(songs, songsCount);
 }
 
 Album::Album()

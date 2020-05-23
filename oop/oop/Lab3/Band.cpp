@@ -37,13 +37,13 @@ void Band::SetDescription(string description)
 	this->_description = description;
 }
 
-void Band::SetAlbums(Album* albums)
+void Band::SetAlbums(Album* albums, int albumsCount)
 {
+	if (albumsCount < 1)
+	{
+		throw exception("Количество альбомов должно быть больше 0.");
+	}
 	this->_albums = albums;
-}
-
-void Band::SetAlbumsCount(int albumsCount)
-{
 	this->_albumsCount = albumsCount;
 }
 
@@ -51,8 +51,7 @@ Band::Band(string title, string description, Album* albums, int albumsCount)
 {
 	this->SetTitle(title);
 	this->SetDescription(description);
-	this->SetAlbums(albums);
-	this->SetAlbumsCount(albumsCount);
+	this->SetAlbums(albums, albumsCount);
 }
 
 Band::Band()

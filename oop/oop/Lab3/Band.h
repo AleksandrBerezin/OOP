@@ -20,8 +20,7 @@ public:
 
 	void SetTitle(string title);
 	void SetDescription(string description);
-	void SetAlbums(Album* albums);
-	void SetAlbumsCount(int albumsCount);
+	void SetAlbums(Album* albums, int albumsCount);
 
 	Band(string title, string description, Album* albums, int albumsCount);
 	Band();

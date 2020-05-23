@@ -20,8 +20,7 @@ public:
 
 	void SetTitle(string title);
 	void SetReleaseYear(int releaseYear);
-	void SetSongs(Song* songs);
-	void SetSongsCount(int songsCount);
+	void SetSongs(Song* songs, int songsCount);
 
 	Album(string title, int releaseYear, Song* songs, int songsCount);
 	Album();
