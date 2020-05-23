@@ -58,6 +58,12 @@
     <Filter Include="Header Files\Lab3">
       <UniqueIdentifier>{2c70ddef-c709-4c31-b80d-f030547bbacf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Lab4">
+      <UniqueIdentifier>{9f013797-f9e6-4c9a-9779-8fb3b6ba8dc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lab4">
+      <UniqueIdentifier>{c0ffed04-5a21-4f6d-81eb-9cad1214285f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab1\Menus\MenuAddressesAndPointers.cpp">
@@ -219,6 +225,12 @@
     <ClCompile Include="Lab3\Genre.cpp">
       <Filter>Source Files\Lab3</Filter>
     </ClCompile>
+    <ClCompile Include="Lab4\Ring.cpp">
+      <Filter>Source Files\Lab4</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab4\MenuLab4.cpp">
+      <Filter>Source Files\Lab4</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\CommonLibrary.h">
@@ -304,6 +316,9 @@
     </ClInclude>
     <ClInclude Include="Lab3\Band.h">
       <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab4\Ring.h">
+      <Filter>Header Files\Lab4</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
