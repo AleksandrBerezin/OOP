@@ -5,6 +5,7 @@ class Ring
 {
 private:
 	const double PI = 3.14159;
+	static int AllRingsCount;
 
 	double _outsideRadius;
 	double _insideRadius;
@@ -13,6 +14,7 @@ private:
 	void AssertOnPositiveValue(double value);
 
 public:
+	static int GetAllRingsCount();
 	double GetOutsideRadius();
 	double GetInsideRadius();
 	Point* GetCenter();
