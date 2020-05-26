@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-class DoubleValidator
+static class DoubleValidator
 {
 public:
 	static bool IsValuePositive(double value);
