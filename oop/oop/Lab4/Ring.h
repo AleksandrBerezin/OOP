@@ -11,8 +11,6 @@ private:
 	double _insideRadius;
 	Point* _center;
 
-	void AssertOnPositiveValue(double value);
-
 public:
 	static int GetAllRingsCount();
 	double GetOutsideRadius();

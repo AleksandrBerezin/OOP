@@ -13,8 +13,7 @@ public:
 	double GetWidth();
 	Point* GetCenter();
 
-	void SetLength(double length);
-	void SetWidth(double width);
+	void SetSides(double length, double width);
 	void SetCenter(Point* center);
 
 	Rectangle(double length, double width, Point* center);

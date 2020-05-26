@@ -1,18 +1,11 @@
 ﻿#pragma once
 #include <iostream>
 #include "Ring.h"
+#include "../Common/DoubleValidator.h"
 
 using namespace std;
 
 int Ring::AllRingsCount = 0;
-
-void Ring::AssertOnPositiveValue(double value)
-{
-	if (value <= 0)
-	{
-		throw exception("Радиус должны быть положительными.");
-	}
-}
 
 int Ring::GetAllRingsCount()
 {
@@ -36,13 +29,11 @@ Point* Ring::GetCenter()
 
 void Ring::SetRadiuses(double outsideRadius, double insideRadius)
 {
-	AssertOnPositiveValue(outsideRadius);
-	AssertOnPositiveValue(insideRadius);
-
-	if (outsideRadius < insideRadius)
-	{
-		throw exception("Внешний радиус не может быть меньше внутреннего.");
-	}
+	DoubleValidator::AssertPositiveValue(outsideRadius);
+	DoubleValidator::AssertPositiveValue(insideRadius);
+	DoubleValidator::AssertValueInRange(outsideRadius, insideRadius, insideRadius
+		+ outsideRadius);
+	
 	this->_outsideRadius = outsideRadius;
 	this->_insideRadius = insideRadius;
 }
@@ -73,7 +64,7 @@ double Ring::GetArea()
 void DemoRing()
 {
 	Ring ring1(2.1, 1.2, new Point(3, 4));
-	cout << "Общее количество колец равно " << Ring::GetAllRingsCount() << endl;
+	cout << endl << "Общее количество колец равно " << Ring::GetAllRingsCount() << endl;
 	Ring ring2(3.1, 0.2, new Point(4, 3));
 	cout << "Общее количество колец равно " << Ring::GetAllRingsCount() << endl;
 	Ring ring3(1.7, 1.3, new Point(5, 4));

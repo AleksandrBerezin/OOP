@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Rectangle.h"
 #include "Point.h"
+#include "../Common/DoubleValidator.h"
 
 using namespace std;
 
@@ -20,21 +21,13 @@ Point* Rectangle::GetCenter()
 	return this->_center;
 }
 
-void Rectangle::SetLength(double length)
+void Rectangle::SetSides(double length, double width)
 {
-	if (length <= 0)
-	{
-		throw exception("Длина должна быть положительной.");
-	}
+	DoubleValidator::AssertPositiveValue(length);
+	DoubleValidator::AssertPositiveValue(width);
+	DoubleValidator::AssertValueInRange(length, width, width + length);
+	
 	this->_length = length;
-}
-
-void Rectangle::SetWidth(double width)
-{
-	if (width <= 0)
-	{
-		throw exception("Ширина должна быть положительной.");
-	}
 	this->_width = width;
 }
 
@@ -45,8 +38,7 @@ void Rectangle::SetCenter(Point* center)
 
 Rectangle::Rectangle(double length, double width, Point* center)
 {
-	this->SetLength(length);
-	this->SetWidth(width);
+	this->SetSides(length, width);
 	this->SetCenter(center);
 }
 
