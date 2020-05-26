@@ -13,11 +13,10 @@ public:
 	double GetWidth();
 	Point* GetCenter();
 
-	void SetSides(double length, double width);
+	void SetLength(double length);
+	void SetWidth(double width);
 	void SetCenter(Point* center);
 
 	Rectangle(double length, double width, Point* center);
 	~Rectangle();
 };
-
-void DemoRectangleWithPoint();

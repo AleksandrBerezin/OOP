@@ -25,5 +25,3 @@ public:
 
 	double GetArea();
 };
-
-void DemoRing();

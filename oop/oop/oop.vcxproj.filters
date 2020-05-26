@@ -231,8 +231,14 @@
     <ClCompile Include="Lab4\MenuLab4.cpp">
       <Filter>Source Files\Lab4</Filter>
     </ClCompile>
-    <ClCompile Include="Common\DoubleValidator.cpp">
-      <Filter>Source Files\Common</Filter>
+    <ClCompile Include="Lab4\CollisionManager.cpp">
+      <Filter>Source Files\Lab4</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab4\GeometricProgram.cpp">
+      <Filter>Source Files\Lab4</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab4\DoubleValidator.cpp">
+      <Filter>Source Files\Lab4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -323,8 +329,14 @@
     <ClInclude Include="Lab4\Ring.h">
       <Filter>Header Files\Lab4</Filter>
     </ClInclude>
-    <ClInclude Include="Common\DoubleValidator.h">
-      <Filter>Header Files\Common</Filter>
+    <ClInclude Include="Lab4\CollisionManager.h">
+      <Filter>Header Files\Lab4</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab4\GeometricProgram.h">
+      <Filter>Header Files\Lab4</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab4\DoubleValidator.h">
+      <Filter>Header Files\Lab4</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

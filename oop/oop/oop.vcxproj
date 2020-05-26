@@ -149,7 +149,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Common\CommonLibrary.cpp" />
-    <ClCompile Include="Common\DoubleValidator.cpp" />
+    <ClCompile Include="Lab4\DoubleValidator.cpp" />
     <ClCompile Include="Lab1\MenuLab1.cpp" />
     <ClCompile Include="Lab1\Menus\MenuAddressesAndPointers.cpp" />
     <ClCompile Include="Lab1\Menus\MenuAlgoritmsAndDebugging.cpp" />
@@ -199,6 +199,8 @@
     <ClCompile Include="Lab3\Route.cpp" />
     <ClCompile Include="Lab3\Song.cpp" />
     <ClCompile Include="Lab3\Time.cpp" />
+    <ClCompile Include="Lab4\CollisionManager.cpp" />
+    <ClCompile Include="Lab4\GeometricProgram.cpp" />
     <ClCompile Include="Lab4\Ring.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Lab2\Enums\MovieGenre.cpp" />
@@ -208,7 +210,7 @@
   <ItemGroup>
     <ClInclude Include="Common\CommonLibrary.h" />
     <ClInclude Include="Common\Menus.h" />
-    <ClInclude Include="Common\DoubleValidator.h" />
+    <ClInclude Include="Lab4\DoubleValidator.h" />
     <ClInclude Include="Lab3\Album.h" />
     <ClInclude Include="Lab3\Band.h" />
     <ClInclude Include="Lab3\Genre.h" />
@@ -235,6 +237,8 @@
     <ClInclude Include="Lab3\Point.h" />
     <ClInclude Include="Lab3\Time.h" />
     <ClInclude Include="Lab3\Song.h" />
+    <ClInclude Include="Lab4\CollisionManager.h" />
+    <ClInclude Include="Lab4\GeometricProgram.h" />
     <ClInclude Include="Lab4\Ring.h" />
   </ItemGroup>
   <ItemGroup>

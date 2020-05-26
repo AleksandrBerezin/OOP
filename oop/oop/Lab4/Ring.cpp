@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <iostream>
 #include "Ring.h"
-#include "../Common/DoubleValidator.h"
+#include "DoubleValidator.h"
 
 using namespace std;
 
@@ -59,53 +59,4 @@ Ring::~Ring()
 double Ring::GetArea()
 {
 	return PI * (_outsideRadius * _outsideRadius - _insideRadius * _insideRadius);
-}
-
-void DemoRing()
-{
-	Ring ring1(2.1, 1.2, new Point(3, 4));
-	cout << endl << "Общее количество колец равно " << Ring::GetAllRingsCount() << endl;
-	Ring ring2(3.1, 0.2, new Point(4, 3));
-	cout << "Общее количество колец равно " << Ring::GetAllRingsCount() << endl;
-	Ring ring3(1.7, 1.3, new Point(5, 4));
-	cout << "Общее количество колец равно " << Ring::GetAllRingsCount() << endl;
-
-	cout << endl << "Площадь кольца 1 равна " << ring1.GetArea() << endl;
-	cout << "Площадь кольца 2 равна " << ring2.GetArea() << endl;
-	cout << "Площадь кольца 3 равна " << ring3.GetArea() << endl << endl;
-	
-	try
-	{
-		Ring wrongRing1(-2.1, 1.2, new Point(3, 4));
-	}
-	catch (exception e)
-	{
-		cout << e.what() << endl;
-	}
-
-	try
-	{
-		Ring wrongRing2(2.1, -1.2, new Point(3, 4));
-	}
-	catch (exception e)
-	{
-		cout << e.what() << endl;
-	}
-
-	try
-	{
-		Ring wrongRing3(1.2, 2.1, new Point(3, 4));
-	}
-	catch (exception e)
-	{
-		cout << e.what() << endl;
-	}
-
-	cout << endl << "Количество колец до вызова конструктора: " << Ring::GetAllRingsCount() << endl;
-
-	Ring* ring = new Ring(10.0, 5.0, new Point(25.0, 25.0));
-	cout << "Количество колец после вызова конструктора: " << Ring::GetAllRingsCount() << endl;
-
-	delete ring;
-	cout << "Количество колец после вызова деструктора: " << Ring::GetAllRingsCount() << endl;
 }

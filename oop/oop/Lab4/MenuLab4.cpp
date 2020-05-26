@@ -2,18 +2,53 @@
 #include <iostream>
 #include <conio.h>
 #include "../Common/CommonLibrary.h"
-#include "Ring.h"
+#include "GeometricProgram.h"
 
 using namespace std;
 
 void MenuLab4()
 {
-	cout << endl;
-	cout << "-----------------------" << endl;
-	cout << "--------- Ring --------" << endl;
-	cout << "-----------------------" << endl;
-	_getch();
+	GeometricProgram geometricProgram;
 
-	DemoRing();
-	_getch();
+	bool isBack = false;
+
+	while (!isBack)
+	{
+		cout << endl;
+		cout << "Выберите вариант:" << endl
+			<< "1) Прямоугольник;" << endl
+			<< "2) Кольцо;" << endl
+			<< "3) Столкновение;" << endl
+			<< "0) Назад." << endl;
+		cout << endl;
+
+		switch (InputInt())
+		{
+			case 1:
+			{
+				geometricProgram.DemoRectangleWithPoint();
+				break;
+			}
+			case 2:
+			{
+				geometricProgram.DemoRing();
+				break;
+			}
+			case 3:
+			{
+				geometricProgram.DemoCollision();
+				break;
+			}
+			case 0:
+			{
+				isBack = true;
+				break;
+			}
+			default:
+			{
+				cout << "Выбран неверный вариант, попробуйте ещё раз." << endl;
+				break;
+			}
+		}
+	}
 }

@@ -4,7 +4,7 @@
 #include "../Common/CommonLibrary.h"
 #include "Book.h"
 #include "Route.h"
-#include "Rectangle.h"
+#include "../Lab4/GeometricProgram.h"
 #include "Flight.h"
 #include "Band.h"
 
@@ -36,7 +36,8 @@ void MenuLab3()
 	cout << "-----------------------" << endl;
 	_getch();
 
-	DemoRectangleWithPoint();
+	GeometricProgram geometricProgram;
+	geometricProgram.DemoRectangleWithPoint();
 	_getch();
 
 	cout << endl;
