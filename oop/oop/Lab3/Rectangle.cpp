@@ -33,16 +33,16 @@ void Rectangle::SetWidth(double width)
 	this->_width = width;
 }
 
-void Rectangle::SetCenter(Point* center)
+void Rectangle::SetCenter(double x, double y)
 {
-	this->_center = center;
+	this->_center = new Point(x, y);
 }
 
-Rectangle::Rectangle(double length, double width, Point* center)
+Rectangle::Rectangle(double length, double width, double x, double y)
 {
 	this->SetLength(length);
 	this->SetWidth(width);
-	this->SetCenter(center);
+	this->SetCenter(x, y);
 }
 
 Rectangle::~Rectangle()

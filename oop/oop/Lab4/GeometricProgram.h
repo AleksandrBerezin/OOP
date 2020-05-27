@@ -6,6 +6,7 @@ public:
 	void DemoRing();
 	void DemoRectangleWithPoint();
 	void DemoCollision();
+	void MenuGeometricProgram();
 };
 
 void PrintCollision(bool isCollision);

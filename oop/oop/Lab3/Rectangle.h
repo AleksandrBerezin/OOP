@@ -15,8 +15,8 @@ public:
 
 	void SetLength(double length);
 	void SetWidth(double width);
-	void SetCenter(Point* center);
+	void SetCenter(double x, double y);
 
-	Rectangle(double length, double width, Point* center);
+	Rectangle(double length, double width, double x, double y);
 	~Rectangle();
 };

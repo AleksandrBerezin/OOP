@@ -18,9 +18,9 @@ public:
 	Point* GetCenter();
 
 	void SetRadiuses(double outsideRadius, double insideRadius);
-	void SetCenter(Point* center);
+	void SetCenter(double x, double y);
 
-	Ring(double outsideRadius, double insideRadius, Point* center);
+	Ring(double outsideRadius, double insideRadius, double x, double y);
 	~Ring();
 
 	double GetArea();

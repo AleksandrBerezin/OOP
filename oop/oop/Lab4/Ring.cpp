@@ -38,15 +38,15 @@ void Ring::SetRadiuses(double outsideRadius, double insideRadius)
 	this->_insideRadius = insideRadius;
 }
 
-void Ring::SetCenter(Point* center)
+void Ring::SetCenter(double x, double y)
 {
-	this->_center = center;
+	this->_center = new Point(x, y);
 }
 
-Ring::Ring(double outsideRadius, double insideRadius, Point* center)
+Ring::Ring(double outsideRadius, double insideRadius, double x, double y)
 {
 	SetRadiuses(outsideRadius, insideRadius);
-	SetCenter(center);
+	SetCenter(x, y);
 	AllRingsCount++;
 }
 
