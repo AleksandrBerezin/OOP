@@ -11,7 +11,7 @@ void MenuLab4()
 	GeometricProgram geometricProgram;
 
 	bool isBack = false;
-
+	// TODO: А почему само меню нельзя перенести в класс GeometricProgram?
 	while (!isBack)
 	{
 		cout << endl;

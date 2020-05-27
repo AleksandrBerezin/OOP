@@ -20,7 +20,7 @@ int main()
 			<< "1) Laboratory work 1;" << endl
 			<< "2) Laboratory work 2;" << endl
 			<< "3) Laboratory work 3;" << endl
-			<< "3) Laboratory work 4;" << endl
+			<< "3) Laboratory work 4;" << endl // TODO: пункт меню
 			<< "0) Exit." << endl;
 		cout << endl;
 
