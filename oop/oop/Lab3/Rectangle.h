@@ -8,6 +8,8 @@ private:
 	double _width;
 	Point* _center;
 
+	void SetCenter(double x, double y);
+
 public:
 	double GetLength();
 	double GetWidth();
@@ -15,7 +17,6 @@ public:
 
 	void SetLength(double length);
 	void SetWidth(double width);
-	void SetCenter(double x, double y);
 
 	Rectangle(double length, double width, double x, double y);
 	~Rectangle();

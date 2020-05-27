@@ -11,6 +11,8 @@ private:
 	double _insideRadius;
 	Point* _center;
 
+	void SetCenter(double x, double y);
+
 public:
 	static int GetAllRingsCount();
 	double GetOutsideRadius();
@@ -18,7 +20,6 @@ public:
 	Point* GetCenter();
 
 	void SetRadiuses(double outsideRadius, double insideRadius);
-	void SetCenter(double x, double y);
 
 	Ring(double outsideRadius, double insideRadius, double x, double y);
 	~Ring();
