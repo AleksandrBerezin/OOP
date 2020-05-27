@@ -35,6 +35,10 @@ void Rectangle::SetWidth(double width)
 
 void Rectangle::SetCenter(double x, double y)
 {
+	if (_center != nullptr)
+	{
+		delete _center;
+	}
 	this->_center = new Point(x, y);
 }
 

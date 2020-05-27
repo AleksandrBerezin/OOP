@@ -40,6 +40,10 @@ void Ring::SetRadiuses(double outsideRadius, double insideRadius)
 
 void Ring::SetCenter(double x, double y)
 {
+	if (_center != nullptr)
+	{
+		delete _center;
+	}
 	this->_center = new Point(x, y);
 }
 
