@@ -55,7 +55,7 @@ void GeometricProgram::DemoRing()
 
 	delete ring;
 	cout << "Количество колец после вызова деструктора: " << Ring::GetAllRingsCount() << endl;
-	// TODO: управление динамической памятью для поинтов происходит на разных уровнях,
+	// управление динамической памятью для поинтов происходит на разных уровнях,
 	// создаю поинты вне класса, а освобождается внутри класса.
 	// в таком случае либо делать освбождение памяти поинтов здесь,
 	// либо передавать конструктор координаты, а поинт будет создаваться внутри
@@ -71,7 +71,6 @@ void GeometricProgram::DemoRectangleWithPoint()
 	rectangles[2] = new Rectangle(4.7, 43.6, -7.0, 16.2);
 	rectangles[3] = new Rectangle(9.2, 23.9, 4.0, 4.1);
 	rectangles[4] = new Rectangle(17.9, 38.0, -3.0, -2.1);
-	// TODO: тоже самое
 	cout << endl;
 
 	for (int i = 0; i < rectanglesCount; i++)
@@ -103,7 +102,6 @@ void GeometricProgram::DemoCollision()
 {
 	Rectangle* rectangleWithCollision1 = new Rectangle(4, 3, 3, 2.5);
 	Rectangle* rectangleWithCollision2 = new Rectangle(6, 4, 7, 5);
-	// TODO: тоже самое
 	PrintCollision(CollisionManager::IsCollision(*rectangleWithCollision1,
 		*rectangleWithCollision2));
 

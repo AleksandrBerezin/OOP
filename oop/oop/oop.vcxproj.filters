@@ -64,6 +64,12 @@
     <Filter Include="Header Files\Lab4">
       <UniqueIdentifier>{c0ffed04-5a21-4f6d-81eb-9cad1214285f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Lab5">
+      <UniqueIdentifier>{06c9b4b2-388f-4bcb-a614-611596e13a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab5">
+      <UniqueIdentifier>{c597510d-72d3-4a0b-abe6-26fce7302f0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab1\Menus\MenuAddressesAndPointers.cpp">
@@ -240,6 +246,18 @@
     <ClCompile Include="Lab4\DoubleValidator.cpp">
       <Filter>Source Files\Lab4</Filter>
     </ClCompile>
+    <ClCompile Include="Lab5\Person.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\Student.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\Teacher.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\MenuLab5.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\CommonLibrary.h">
@@ -337,6 +355,15 @@
     </ClInclude>
     <ClInclude Include="Lab4\DoubleValidator.h">
       <Filter>Header Files\Lab4</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Person.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Student.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Teacher.h">
+      <Filter>Header Files\Lab5</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

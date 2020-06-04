@@ -20,7 +20,8 @@ int main()
 			<< "1) Laboratory work 1;" << endl
 			<< "2) Laboratory work 2;" << endl
 			<< "3) Laboratory work 3;" << endl
-			<< "4) Laboratory work 4;" << endl // TODO: пункт меню
+			<< "4) Laboratory work 4;" << endl
+			<< "5) Laboratory work 5;" << endl
 			<< "0) Exit." << endl;
 		cout << endl;
 
@@ -44,6 +45,11 @@ int main()
 			case 4:
 			{
 				MenuLab4();
+				break;
+			}
+			case 5:
+			{
+				MenuLab5();
 				break;
 			}
 			case 0:

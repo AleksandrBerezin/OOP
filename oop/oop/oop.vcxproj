@@ -202,10 +202,14 @@
     <ClCompile Include="Lab4\CollisionManager.cpp" />
     <ClCompile Include="Lab4\GeometricProgram.cpp" />
     <ClCompile Include="Lab4\Ring.cpp" />
+    <ClCompile Include="Lab5\Student.cpp" />
+    <ClCompile Include="Lab5\Teacher.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Lab2\Enums\MovieGenre.cpp" />
     <ClCompile Include="Lab3\Point.cpp" />
     <ClCompile Include="Lab4\MenuLab4.cpp" />
+    <ClCompile Include="Lab5\Person.cpp" />
+    <ClCompile Include="Lab5\MenuLab5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\CommonLibrary.h" />
@@ -240,6 +244,9 @@
     <ClInclude Include="Lab4\CollisionManager.h" />
     <ClInclude Include="Lab4\GeometricProgram.h" />
     <ClInclude Include="Lab4\Ring.h" />
+    <ClInclude Include="Lab5\Person.h" />
+    <ClInclude Include="Lab5\Student.h" />
+    <ClInclude Include="Lab5\Teacher.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />

@@ -10,5 +10,4 @@ void MenuLab4()
 {
 	GeometricProgram geometricProgram;
 	geometricProgram.MenuGeometricProgram();
-	// TODO: А почему само меню нельзя перенести в класс GeometricProgram?
 }
