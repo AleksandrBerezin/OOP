@@ -258,6 +258,15 @@
     <ClCompile Include="Lab5\MenuLab5.cpp">
       <Filter>Source Files\Lab5</Filter>
     </ClCompile>
+    <ClCompile Include="Lab5\Post.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\User.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\PaidUser.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\CommonLibrary.h">
@@ -363,6 +372,15 @@
       <Filter>Header Files\Lab5</Filter>
     </ClInclude>
     <ClInclude Include="Lab5\Teacher.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Post.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\User.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\PaidUser.h">
       <Filter>Header Files\Lab5</Filter>
     </ClInclude>
   </ItemGroup>

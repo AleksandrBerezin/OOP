@@ -202,18 +202,22 @@
     <ClCompile Include="Lab4\CollisionManager.cpp" />
     <ClCompile Include="Lab4\GeometricProgram.cpp" />
     <ClCompile Include="Lab4\Ring.cpp" />
+    <ClCompile Include="Lab5\PaidUser.cpp" />
     <ClCompile Include="Lab5\Student.cpp" />
     <ClCompile Include="Lab5\Teacher.cpp" />
+    <ClCompile Include="Lab5\User.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Lab2\Enums\MovieGenre.cpp" />
     <ClCompile Include="Lab3\Point.cpp" />
     <ClCompile Include="Lab4\MenuLab4.cpp" />
     <ClCompile Include="Lab5\Person.cpp" />
     <ClCompile Include="Lab5\MenuLab5.cpp" />
+    <ClCompile Include="Lab5\Post.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\CommonLibrary.h" />
     <ClInclude Include="Common\Menus.h" />
+    <ClInclude Include="Lab5\Post.h" />
     <ClInclude Include="Lab4\DoubleValidator.h" />
     <ClInclude Include="Lab3\Album.h" />
     <ClInclude Include="Lab3\Band.h" />
@@ -247,6 +251,8 @@
     <ClInclude Include="Lab5\Person.h" />
     <ClInclude Include="Lab5\Student.h" />
     <ClInclude Include="Lab5\Teacher.h" />
+    <ClInclude Include="Lab5\User.h" />
+    <ClInclude Include="Lab5\PaidUser.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
