@@ -6,11 +6,16 @@
 #include "User.h"
 #include "PaidUser.h"
 #include "Post.h"
+#include "Product.h"
+#include "PercentDiscount.h"
+#include "CertificateDiscount.h"
 
 using namespace std;
 
 void MenuLab5()
 {
+	//////////// Наследование 5.1.1-5.1.7
+
 	setlocale(LC_ALL, "Russian");
 	cout << endl;
 
@@ -27,6 +32,8 @@ void MenuLab5()
 	delete teacher;
 
 	cout << endl;
+
+	//////////// Рефакторинг с выделением базового класса 5.2.1-5.2.7
 
 	User** users = new User * [8]
 	{
@@ -57,4 +64,40 @@ void MenuLab5()
 		delete users[i];
 	}
 	delete[] users;
+
+	////////////// Полиморфизм 5.3.1-5.3.8
+
+	Product* products = new Product[10]
+	{
+		*new Product("Acer Asripe XC-830", BuildingBlock, 11999.00),
+		*new Product("Sven 350W", PowerSupplyUnit, 1088.55),
+		*new Product("Xilence A200", Cooler, 405.00),
+		*new Product("Lenovo Ideacentre 310S-08ASR", BuildingBlock, 22500.90),
+		*new Product("Philips 226E9QSB", Monitor, 9199.99),
+		*new Product("Smartbuy 338 One чёрный", Mouse, 345.00),
+		*new Product("GIGABYTE B450M DS3H", Motherboard, 5299.35),
+		*new Product("Winard 500W", PowerSupplyUnit, 1240.99),
+		*new Product("Aardwolf Performa 5X", Cooler, 1550.00),
+		*new Product("Cougar VS450W", BuildingBlock, 3699.75),
+	};
+
+	int percent = 15;
+
+	cout << endl << "Размер процентной скидки на категорию \"Материнская плата\" составляет "
+		<< percent << "%" << endl;
+
+	PercentDiscount* percentDiscount = new PercentDiscount(Motherboard, percent);
+	ShowCheckWithDiscount(percentDiscount, products, 10);
+	delete percentDiscount;
+
+	int certificateSize = 500;
+
+	cout << endl << "Размер сертификатной скидки на категорию \"Кулер\" составляет "
+		<< certificateSize << " руб." << endl;
+
+	CertificateDiscount* certificateDiscount = new CertificateDiscount(Cooler, certificateSize);
+	ShowCheckWithDiscount(certificateDiscount, products, 10);
+	delete certificateDiscount;
+
+	delete[] products;
 }

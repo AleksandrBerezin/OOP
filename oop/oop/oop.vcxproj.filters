@@ -267,6 +267,18 @@
     <ClCompile Include="Lab5\PaidUser.cpp">
       <Filter>Source Files\Lab5</Filter>
     </ClCompile>
+    <ClCompile Include="Lab5\Product.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\DiscountBase.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\PercentDiscount.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\CertificateDiscount.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\CommonLibrary.h">
@@ -381,6 +393,21 @@
       <Filter>Header Files\Lab5</Filter>
     </ClInclude>
     <ClInclude Include="Lab5\PaidUser.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Product.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\CategoryType.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\DiscountBase.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\PercentDiscount.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\CertificateDiscount.h">
       <Filter>Header Files\Lab5</Filter>
     </ClInclude>
   </ItemGroup>
