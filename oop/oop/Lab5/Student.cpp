@@ -21,8 +21,8 @@ void Student::SetEntranceYear(int entranceYear)
 	this->_entranceYear = entranceYear;
 }
 
-Student::Student(string name, string surname, string patronymic, int id, int entranceYear) :
-	Person(name, surname, patronymic)
+Student::Student(string firstName, string lastName, string middleName, int id, int entranceYear) :
+	Person(firstName, lastName, middleName)
 {
 	SetId(id);
 	SetEntranceYear(entranceYear);

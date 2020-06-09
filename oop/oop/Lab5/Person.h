@@ -6,20 +6,20 @@ using std::string;
 class Person
 {
 private:
-	string _name;
-	string _surname;
-	string _patronymic;
+	string _firstName;		// Имя
+	string _lastName;		// Фамилия
+	string _middleName;		// Отчество
 
 public:
-	string GetName();
-	string GetSurname();
-	string GetPatronymic();
+	string GetFirstName();
+	string GetLastName();
+	string GetMiddleName();
 
-	void SetName(string name);
-	void SetSurname(string surname);
-	void SetPatronymic(string patronymic);
+	void SetFirstName(string firstName);
+	void SetLastName(string lastName);
+	void SetMiddleName(string middleName);
 
-	Person(string name, string surname, string patronymic);
+	Person(string firstName, string lastName, string middleName);
 };
 
 void ShowName(Person* person);

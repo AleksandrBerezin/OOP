@@ -13,5 +13,5 @@ public:
 
 	void SetPosition(string position);
 
-	Teacher(string name, string surname, string patronymic, string position);
+	Teacher(string firstName, string lastName, string middleName, string position);
 };

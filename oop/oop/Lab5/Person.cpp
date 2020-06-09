@@ -4,45 +4,45 @@
 
 using namespace std;
 
-string Person::GetName()
+string Person::GetFirstName()
 {
-	return this->_name;
+	return this->_firstName;
 }
 
-string Person::GetSurname()
+string Person::GetLastName()
 {
-	return this->_surname;
+	return this->_lastName;
 }
 
-string Person::GetPatronymic()
+string Person::GetMiddleName()
 {
-	return this->_patronymic;
+	return this->_middleName;
 }
 
-void Person::SetName(string name)
+void Person::SetFirstName(string firstName)
 {
-	this->_name = name;
+	this->_firstName = firstName;
 }
 
-void Person::SetSurname(string surname)
+void Person::SetLastName(string lastName)
 {
-	this->_surname = surname;
+	this->_lastName = lastName;
 }
 
-void Person::SetPatronymic(string patronymic)
+void Person::SetMiddleName(string middleName)
 {
-	this->_patronymic = patronymic;
+	this->_middleName = middleName;
 }
 
-Person::Person(string name, string surname, string patronymic)
+Person::Person(string firstName, string lastName, string middleName)
 {
-	SetName(name);
-	SetSurname(surname);
-	SetPatronymic(patronymic);
+	SetFirstName(firstName);
+	SetLastName(lastName);
+	SetMiddleName(middleName);
 }
 
 void ShowName(Person* person)
 {
-	cout << person->GetName() << " " << person->GetSurname() << " " << person->GetPatronymic() 
+	cout << person->GetFirstName() << " " << person->GetLastName() << " " << person->GetMiddleName() 
 		<< endl;
 }

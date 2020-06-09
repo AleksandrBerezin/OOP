@@ -16,5 +16,5 @@ public:
 	void SetId(int id);
 	void SetEntranceYear(int entranceYear);
 
-	Student(string name, string surname, string patronymic, int id, int entranceYear);
+	Student(string firstName, string lastName, string middleName, int id, int entranceYear);
 };
